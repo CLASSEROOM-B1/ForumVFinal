@@ -1,0 +1,69 @@
+{{ define "category"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/css/category.css" type="text/css">
+
+    <title>SandBox</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">header</div>
+        <div class="categoryContainer">
+
+            <button class="createButton"><img src="/ressources/ajouter-un-bouton.png" id="imageButton">
+                <p class="createAPost">create new post</p>
+            </button>
+            <div class="container_sep">
+                <div class="sep"></div>
+            </div>
+            <p>Categories</p>
+            <div class="category_List">
+
+                <div class="ordi">
+                    <div class="fruit"><img class="imgBIG" src="/ressources/melon 1.png">Politics</div>
+                    <div class="fruit"><img class="imgBIG" src="/ressources/peach 2.png">Sports</div>
+                    <div class="fruit"><img class="imgBIG" src="/ressources/orange 1.png">High - Tech</div>
+                    <div class="fruit"><img class="imgBIG" src="/ressources/pear 1.png">Arts</div>
+                    <div class="fruit"><img class="imgBIG" src="/ressources/strawberry (1) 2.png">Tips / Tricks</div>
+                    <div class="fruit"><img class="imgBIG" src="/ressources/6238-raspberry 1.png">Movies / Shows</div>
+                    <div class="fruit"><img class="imgBIG" src="/ressources/grapes 3.png">Society</div>
+                    <div class="fruit"><img class="imgBIG" src="/ressources/cherries (1) 1.png">Musics</div>
+                    <div class="fruit"><img class="imgBIG" src="/ressources/watermelon 1.png">Gaming</div>
+                    <div class="fruit"><img class="imgBIG" src="/ressources/lemon 1.png">History / Learning</div>
+                    <div class="fruit"><img class="imgBIG" src="/ressources/apple 2.png">Food / Drinks</div>
+                    <div class="fruit"><img class="imgBIG" src="/ressources/mango 1.png">Travels</div>
+                </div>
+                <button class="collapsible">More ...</button>
+                <div class="content">
+                    <div class="fruit"><img class="imgSMALL" src="/ressources/melon 1.png">Politics</div>
+                    <div class="fruit"><img class="imgSMALL" src="/ressources/peach 2.png">Sports</div>
+                    <div class="fruit"><img class="imgSMALL" src="/ressources/orange 1.png">High - Tech</div>
+                    <div class="fruit"><img class="imgSMALL" src="/ressources/pear 1.png">Arts</div>
+                    <div class="fruit"><img class="imgSMALL" src="/ressources/strawberry (1) 2.png">Tips / Tricks</div>
+                    <div class="fruit"><img class="imgSMALL" src="/ressources/6238-raspberry 1.png">Movies / Shows</div>
+                    <div class="fruit"><img class="imgSMALL" src="/ressources/grapes 3.png">Society</div>
+                    <div class="fruit"><img class="imgSMALL" src="/ressources/cherries (1) 1.png">Musics</div>
+                    <div class="fruit"><img class="imgSMALL" src="/ressources/watermelon 1.png">Gaming</div>
+                    <div class="fruit"><img class="imgSMALL" src="/ressources/lemon 1.png">History / Learning</div>
+                    <div class="fruit"><img class="imgSMALL" src="/ressources/apple 2.png">Food / Drinks</div>
+                    <div class="fruit"><img class="imgSMALL" src="/ressources/mango 1.png">Travels</div>
+                </div>
+            </div>
+
+            <button class="contactUs"><img id="contactUsButton" src="/ressources/envoyer.png">
+                <p class="createAPost" id="">Contact Us</p>
+            </button>
+        </div>
+
+        <div class="searchBar">search bar</div>
+        <div class="postContainer">post</div>
+    </div>
+</body>
+<script src="/js/category.js"></script>
+
+</html>
+
+{{ end }}
