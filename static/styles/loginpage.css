@@ -5,6 +5,7 @@ body {
 .all-data {
     display: flex;
     justify-content: space-around;
+    margin-top: 40px;
 }
 
 .container-login-info {
@@ -15,16 +16,17 @@ body {
 .container-title-login {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .title-login {
     font-family: 'Kodchasan', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .raspberrie {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
 }
 
 .spacebar {
@@ -148,156 +150,231 @@ a:hover {
         width: 149px;
         height: 175px;
     }
-    .spacebar{
+
+    .spacebar {
         height: 400px;
         margin-right: 20px;
     }
 
-    .title-login{
-        font-size: 25px;
+    .title-login {
+        font-size: 20px;
     }
 
-    .raspberrie{
-        width: 40px;
-        height: 40px;
+    .raspberrie {
+        width: 35px;
+        height: 35px;
     }
 
-    .input-pseudo{
+    .input-pseudo {
         width: 220px;
     }
 
-    .input-password{
+    .input-password {
         width: 220px;
     }
 }
 
 @media screen and (max-width: 426px) {
     .logo {
-        width: 119px;
-        height: 145px;
-    }
-    .spacebar{
-        height: 355px;
-        width: 2px;
-        margin-right: 20px;
+        display: none;
     }
 
-    .title-login{
+    .container-spacebar{
+        width: 100%;
+    }
+
+    .all-data{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .container-login-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-spacebar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .spacebar {
+        height: 2px;
+        width: 90%;
+        margin-right: 0px;
+    }
+
+    .login-info{
+        margin-top:50px;
+    }
+
+    .title-login {
         font-size: 20px;
     }
 
-    .raspberrie{
+    .raspberrie {
         width: 30px;
         height: 30px;
     }
 
-    .input-pseudo{
-        width: 170px;
+    .input-pseudo {
+        width: 190px;
         height: 30px;
     }
 
-    .input-password{
-        width: 170px;
+    .input-password {
+        width: 190px;
         height: 30px;
     }
 
-    .button-connection{
+    .button-connection {
         font-size: 10px;
         width: 150px;
         height: 30px;
     }
 
-    .link-registration{
+    .link-registration {
         font-size: 10px;
     }
 
-    .copyrigth{
+    .copyrigth {
         font-size: 10px;
     }
-    
+
 }
 
-@media screen and (max-width: 376px){
-    .spacebar{
-        height: 350px;
-        margin-left: 20px;
+@media screen and (max-width: 376px) {
+    .logo {
+        display: none;
     }
 
-    .title-login{
-        font-size: 15px;
+    .container-spacebar{
+        width: 100%;
     }
 
-    .container-title-login{
+    .all-data{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .container-login-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-spacebar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .spacebar {
+        height: 2px;
+        width: 90%;
+        margin-right: 0px;
+    }
+
+    .title-login {
+        font-size: 20px;
+    }
+
+    .container-title-login {
         margin-top: 20px;
     }
 
-    .login-info{
+    .login-info {
         margin-bottom: 25px;
     }
 
-    .raspberrie{
+    .raspberrie {
         width: 20px;
         height: 20px;
     }
 
-    .input-pseudo{
-        width: 140px;
+    .input-pseudo {
+        width: 170px;
         height: 25px;
     }
 
-    .input-password{
-        width: 140px;
+    .input-password {
+        width: 170px;
         height: 25px;
     }
 
-    .button-connection{
+    .button-connection {
         font-size: 10px;
         width: 100px;
         height: 25px;
     }
 
-    .link-registration{
+    .link-registration {
         font-size: 10px;
     }
 
-    .copyrigth{
+    .copyrigth {
         font-size: 10px;
     }
-    
+
 }
 
-@media screen and (max-width: 321px){
+@media screen and (max-width: 321px) {
     .logo {
-        width: 99px;
-        height: 125px;
-    }
-    .spacebar{
-        height: 360px;
-        margin-left: 30px;
+        display: none;
     }
 
-    .container-title-login{
-        margin-top: 20px;
-        /* margin-left: 10px; */
+    .container-spacebar{
+        width: 100%;
     }
 
-    .login-info{
+    .all-data{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .container-login-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-spacebar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .spacebar {
+        height: 2px;
+        width: 90%;
+        margin-right: 0px;
+    }
+
+    .login-info {
         margin-left: 10px;
     }
 
-    .input-pseudo{
-        width: 100px;
+    .input-pseudo {
+        width: 170px;
         height: 25px;
     }
 
-    .input-password{
-        width: 100px;
+    .input-password {
+        width: 170px;
         height: 25px;
     }
 
-    .link-registration{
+    .link-registration {
         font-size: 8px;
     }
 
-    
+
 }
