@@ -5,30 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/styles/loginpage.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/registerpage.css" media="all" />
     <link href="https://fonts.cdnfonts.com/css/kodchasan" rel="stylesheet">
     <link rel="shortcut icon" href="/static/images/Logo.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/static/styles/header.css" media="all" />
-    <title>Login</title>
+    <title>Register</title>
 </head>
 {{template "header"}}
 
 <body>
     <div class="all">
         <div class="all-data">
-            <div class="container-login-info">
-                <div class="login-info">
-                    <div class="container-title-login">
-                        <div class="title-login">
-                            LOGIN
+            <div class="container-register-info">
+                <div class="register-info">
+                    <div class="container-title-register">
+                        <div class="title-register">
+                            REGISTER
                         </div>
-                        <div class="image-login">
-                            <img src="/static/images/raspberrie.png" class="raspberrie">
+                        <div class="image-register">
+                            <img src="/static/images/strawberry.png" class="strawberry">
                         </div>
                     </div>
                     <br>
                     <br>
-                    <form method="POST">
+                    <form method="post">
                         <div class="pseudo">
                             <label for="pseudo">Pseudo</label>
                         </div>
@@ -37,28 +37,42 @@
                         <br>
                         <br>
                         <br>
+                        <div class="email">
+                            <label for="email">Email</label>
+                        </div>
+                        <br>
+                        <input class="input-email" placeholder="example@gmail.com" type="text" id="email" name="email">
+                        <br>
+                        <br>
+                        <br>
                         <div class="password">
                             <label for="password">Password</label>
                         </div>
                         <br>
-                        <input class="input-password" placeholder="**********" type="password" id="password"
-                            name="password">
+                        <input class="input-password" placeholder="**********" type="password" id="password" name="password">
                         <br>
                         <br>
                         <br>
+                        <div class="confirm-password">
+                            <label for="confirm-password">Confirm Password</label>
+                        </div>
                         <br>
-                        <div class="container-connection">
-                            <div class="connection">
-                                <button class="button-connection" type="submit" value="Submit">CONNECTION</button>
+                        <input class="input-confirm-password" placeholder="**********" type="password" id="confirm-password" name="confirm-password">
+                        <br>
+                        <br>
+                        <br>
+                        <div class="container-registration">
+                            <div class="registration">
+                                <button class="button-registration" type="submit" value="Submit">REGISTRATION</button>
                             </div>
                         </div>
-                    </form>
+                    </form>  
                     <br>
-                    <div class="container-link-registration">
-                        <div class="link-registration">
-                            For registration, click <a href="/register">here</a>
+                    <div class="container-link-login">
+                        <div class="link-login">
+                            To log in, click <a href="/">here</a>
                         </div>
-                    </div>
+                    </div>                  
                 </div>
             </div>
             <div class="container-spacebar">
@@ -73,12 +87,15 @@
         </div>
         <br>
         <br>
+        <br>
+        <br>
         <div class="container-copyrigth">
             <div class="copyrigth">
                 Copyright © 2023 SDF, all rights reserved.
             </div>
         </div>
-    </div>
+        </div>
+
 </body>
 
 </html>
