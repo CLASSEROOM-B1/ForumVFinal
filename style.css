@@ -2,6 +2,7 @@
 
 body {
     margin: auto;
+    
 }
 
 header {
@@ -20,11 +21,19 @@ header {
     gap: 15px;
 }
 
+.border {
+    background-color: black;
+    width: 3px;
+    height: 80%;
+    border-radius: 100px;
+}
+
+
 .profil {
     width: 45%;
     height: 75%;
     background-color: rgb(255, 253, 253);
-    border-right: 5px solid black;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -156,8 +165,8 @@ input::placeholder {
 .logout {
     background-color: rgb(255, 255, 255);
      border-radius: 25px;
-     width: 30vh;
-     height: 10vh;
+     width: 300px;
+     height: 100px;
      border: 2px solid black;
      font-family: 'Kodchasan Medium', sans-serif;
     font-size: 15px;
@@ -249,6 +258,41 @@ flex-direction: column;
 .NLP {
     font-family: 'Kodchasan Extralight', sans-serif;
     font-size: 25px;
+}
+
+@media screen and (max-width: 1000px) { 
+
+.profiletlogo {
+    flex-direction: column;
+    height: 90%;
+
+}
+
+
+input {
+    width: 200px;
+}
+
+
+.pseudotext {
+    width: 200px;
+}
+
+
+.password {
+    font-size: 15px;
+    width: 100%;
+
+}
+
+.logout {
+    height: 40px;
+    width: 200px;
+}
+
+.posts {
+    width: 90%;
+}
 }
 
 
