@@ -36,7 +36,6 @@ body {
 }
 .searchBar {
   grid-area: 2 / 2 / 3 / 6;
-  background-color: blue;
 }
 .postContainer {
   grid-area: 3 / 2 / 6 / 6;
