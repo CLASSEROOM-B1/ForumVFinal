@@ -45,6 +45,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     
     
 }
@@ -72,13 +73,13 @@ header {
 
 .friends {
     font-family: 'Kodchasan', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 
 .biography {
     font-family: 'Kodchasan', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 0;
 }
 
