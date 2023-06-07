@@ -23,10 +23,10 @@ header {
 }
 
 .border {
+    width: 4px;
+    height: 450px;
     background-color: black;
-    width: 3px;
-    height: 80%;
-    border-radius: 100px;
+    border-radius: 10px;
 }
 
 
@@ -206,6 +206,7 @@ h1 {
     width: 47.5%;
     height: 70vh;
     flex-direction: column;
+    margin-left: 20px;
     
 }
 
@@ -272,6 +273,14 @@ flex-direction: column;
 }
 
 @media screen and (max-width: 1000px) { 
+
+    .border {
+        display: none;
+    }
+
+    .posts {
+        margin-left: 0px;
+    }
 
 .profiletlogo {
     flex-direction: column;
@@ -371,7 +380,7 @@ flex-direction: column;
     width: 100px;
     display: flex;
     text-align: start;
-    font-family: 'Kodchasan Medium', sans-serif;
+    font-family: 'Kodchasan', sans-serif;
     font-size: 15px;
 }
 
@@ -379,7 +388,7 @@ flex-direction: column;
     width: 200px;
     display: flex;
     text-align: start;
-    font-family: 'Kodchasan Medium', sans-serif;
+    font-family: 'Kodchasan', sans-serif;
     font-size: 15px;
 }
 
@@ -389,13 +398,15 @@ flex-direction: column;
     width: 250px;
     user-select: none;
     padding: 5px;
-    font-family: 'Kodchasan Medium', sans-serif;
+    font-family: 'Kodchasan', sans-serif;
     font-size: 15px;
+    background-color: white;
+    border: black 1px solid;
   
 }
 
 .passwordinput::placeholder {
-    font-family: 'Kodchasan Medium', sans-serif;
+    font-family: 'Kodchasan', sans-serif;
     font-size: 15px;
     user-select: none;  
     
@@ -407,7 +418,7 @@ flex-direction: column;
      width: 150px;
      height: 35px;
      border: 2px solid black;
-     font-family: 'Kodchasan Medium', sans-serif;
+     font-family: 'Kodchasan', sans-serif;
     font-size: 15px;
 }
 
@@ -433,3 +444,10 @@ flex-direction: column;
     }
 
 }   
+
+
+.changepassword {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 25px;
+    margin-bottom: 0; 
+}
