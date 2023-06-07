@@ -20,3 +20,119 @@ header {
     align-items: center;
     gap: 15px;
 }
+
+
+.profil {
+    width: 45%;
+    height: 75%;
+    background-color: rgb(255, 253, 253);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+
+
+.titrelogo {
+
+    width: 90%;
+    height: 60%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    
+}
+
+
+
+.border {
+    background-color: black;
+    width: 3px;
+    height: 80%;
+    border-radius: 100px;
+}
+
+
+h1 {
+    font-family: 'Kodchasan ExtraLight', sans-serif;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+
+h2 {
+    font-family: 'Kodchasan ExtraLight', sans-serif;
+    font-size: 20px;
+}
+
+
+.posts {
+    display: flex;
+    width: 47.5%;
+    height: 70vh;
+    flex-direction: column;
+    
+}
+
+
+
+.buttonposts {
+    height: 10vh;
+    width: 50%;
+    background-color: white;
+    color: grey;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid grey;
+    font-family: 'Kodchasan Extralight', sans-serif;
+    font-size: 20px;
+    transition: border-bottom-color 0.5s ease;
+    
+    
+}
+
+a {
+    text-decoration: none;
+    color: #fd4f5a;
+}
+
+a:hover {
+    border-bottom: #ef396c 2px solid;
+}
+
+
+.buttons {
+display: flex;
+width: 100%;
+}
+
+
+
+
+.buttonposts.active {
+    border-bottom-color: rgb(0, 0, 0);
+    color: black;
+   
+}
+
+
+#ourposts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    }
+
+.NLP {
+    font-family: 'Kodchasan Extralight', sans-serif;
+    font-size: 25px;
+}
