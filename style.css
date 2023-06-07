@@ -42,6 +42,11 @@ header {
 
 }
 
+.cherry {
+    width: 75px;
+    height: 75px;
+}
+
 
 
 
@@ -62,6 +67,7 @@ h1 {
     font-family: 'Kodchasan ExtraLight', sans-serif;
     font-size: 25px;
     margin-bottom: 0;
+    text-decoration: none;
 }
 
 
@@ -115,8 +121,8 @@ h3 {
 .pseudo {
     display: flex;
     flex-direction: column;
-    font-family: 'Kodchasan Medium', sans-serif;
-    font-size: 20px;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 16px;
     gap: 10px;
     align-items: center;
     width: 60%;
@@ -131,11 +137,13 @@ h3 {
 }
 
 .pseudoinput {
-    height: 5vh;
+    height: 35px;
     border-radius: 25px;
-    width: 75%;
+    width: 300px;
     user-select: none;
-    padding-left:15px;
+    padding-left:10px;
+    background-color: white;
+    border: black 1px solid;
     
 }
 
