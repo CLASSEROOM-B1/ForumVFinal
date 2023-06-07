@@ -11,8 +11,8 @@ header {
 }
 
 
-.profiletlogo {
-    background-color: rgb(255, 255, 255);
+.profiletposts {
+    background-color: rgb(248, 247, 247);
     height: 90vh;
     width: 100%;
     display: flex;
