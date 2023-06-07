@@ -12,13 +12,13 @@ header {
 
 
 .profiletposts {
-    background-color: rgb(248, 247, 247);
+    
     height: 90vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 30px;
 }
 
 
@@ -45,7 +45,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 30px;
     
 }
 
@@ -56,6 +56,7 @@ header {
     width: 3px;
     height: 80%;
     border-radius: 100px;
+    
 }
 
 
@@ -77,6 +78,8 @@ h2 {
     width: 47.5%;
     height: 70vh;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -84,15 +87,15 @@ h2 {
 
 .buttonposts {
     height: 10vh;
-    width: 50%;
+    width: 100%;
     background-color: white;
-    color: grey;
+    color: rgb(0, 0, 0);
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid rgb(0, 0, 0);
     font-family: 'Kodchasan Extralight', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     transition: border-bottom-color 0.5s ease;
     
     
@@ -149,4 +152,48 @@ width: 100%;
 h3 {
     font-family: 'Kodchasan Extralight', sans-serif;
     font-size: 15px;
+}
+
+.button {
+    background-color: rgb(255, 255, 255);
+     border-radius: 25px;
+     width: 250px;
+     height: 45px;
+     border: 2px solid black;
+     font-family: 'Kodchasan Medium', sans-serif;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.message-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+   
+    
+    
+}
+
+.message {  
+    width: 25px;
+    height: 25px;
+}
+
+.button:hover {
+    background: transparent;
+    
+    background-image: linear-gradient(90deg, white, white),
+        linear-gradient(90deg, #ef396c, #f69023);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+
+.croix {
+    width: 75px;
+    height: 75px;
 }
