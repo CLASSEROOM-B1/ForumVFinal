@@ -1,15 +1,15 @@
 .container-contenu {
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 .scrollable-contenu {
-  background-color: rgb(196, 196, 196);
-  width: 70%;
+  width: 100%;
   height: 95%;
+  gap: 30px;
   display: flex;
+  align-items: center;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 .imgsociety {
