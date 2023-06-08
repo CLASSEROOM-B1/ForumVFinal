@@ -15,6 +15,10 @@
   gap: 15px;
   margin-left: 5px;
 }
+.ordi::-webkit-scrollbar {
+  display: none;
+}
+
 .sep {
   border: 1px black solid;
   border-radius: 20px;
@@ -73,6 +77,8 @@ a {
   height: 300px;
   overflow-x: hidden;
   overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 .fruit {
   display: flex;
