@@ -1,14 +1,14 @@
-// Sélection des boutons
+
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
 const likedpostcontents = document.getElementById('likedposts')
 const ourpostcontents = document.getElementById('ourposts')
 
 
-// Appliquer la classe active au premier bouton par défaut
+
 button1.classList.add('active');
 
-// Événements de clic sur les boutons
+
 button1.addEventListener('click', () => {
     button1.classList.add('active');
     button2.classList.remove('active');
@@ -34,24 +34,44 @@ button1.addEventListener('click', () => {
     ourpostcontents.style.display ='flex';
 })
 
-// Sélectionne la balise <a> de la div "password"
-var link = document.querySelector('#passwordlink');
-var link2 = document.querySelector('#submit');
-// Sélectionne la popup box
-var popup = document.getElementById('popup');
 
-// Ajoute un gestionnaire d'événement de clic sur le lien
+let link = document.querySelector('#passwordlink');
+let link2 = document.querySelector('#submit');
+let popup = document.getElementById('popup');
+
+
 link.addEventListener('click', function(event) {
-  event.preventDefault(); // Empêche le comportement par défaut du lien
+  event.preventDefault(); 
 
-  // Affiche la popup box
+ 
   popup.style.display = 'block';
 });
 
 
 link2.addEventListener('click', function(event) {
-    event.preventDefault(); // Empêche le comportement par défaut du lien
-  
-    // Affiche la popup box
+    event.preventDefault(); 
     popup.style.display = 'none';
   });
+
+
+let biographyElement = document.querySelector('.biography');
+
+biographyElement.addEventListener('click', function() {
+    let text = biographyElement.textContent.trim();
+    let input = document.createElement('input');
+    input.type = 'text';
+    input.value = text;
+    input.maxLength = 50;
+    input.classList.add('biography-input');
+
+    biographyElement.textContent = '';
+    biographyElement.appendChild(input);
+
+    input.focus();
+
+    input.addEventListener('blur', function() {
+        let newText = input.value.trim();
+        biographyElement.textContent = newText || 'Biography ...';
+    });
+});
+
