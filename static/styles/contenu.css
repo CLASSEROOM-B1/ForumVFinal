@@ -1,0 +1,153 @@
+.container-contenu {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.scrollable-contenu {
+  background-color: rgb(196, 196, 196);
+  width: 70%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgsociety {
+  width: 30%;
+  height: 100%;
+}
+.society {
+  width: 600px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  border: solid 4px #9a3af8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.titre {
+  font-family: "kodchasan";
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.pseudo {
+  background-color: #ffffff;
+  width: 25%;
+  height: 90%;
+  font-family: "kodchasan";
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.milieu {
+  background-color: rgb(255, 255, 255);
+  width: 90%;
+  height: 55%;
+  font-family: "kodchasan";
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bas {
+  background-color: rgb(255, 255, 255);
+  width: 90%;
+  height: 25%;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categorie {
+  font-family: "kodchasan";
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.rs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 90%;
+  background-color: rgb(255, 255, 255);
+}
+
+.commentaires {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  height: 70%;
+  background-color: #ffffff;
+  gap: 5px;
+}
+
+img {
+  height: 50%;
+}
+
+.nbrcommentaires {
+  font-family: "kodchasan";
+  font-size: 15px;
+  font-weight: 500;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.likes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  height: 70%;
+  background-color: #ffffff;
+  gap: 5px;
+}
+
+.nbrlikes {
+  font-family: "kodchasan";
+  font-size: 15px;
+  font-weight: 500;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.partager {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  height: 70%;
+  background-color: #ffffff;
+  gap: 5px;
+}
+
+.share {
+  font-family: "kodchasan";
+  font-size: 15px;
+  font-weight: 500;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+.haut {
+  background-color: rgb(255, 255, 255);
+  width: 95%;
+  height: 25%;
+  border-radius: 25px 25px 0px 0px;
+  border-bottom: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

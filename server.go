@@ -25,7 +25,7 @@ func main() {
 // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 func HomePage(w http.ResponseWriter, r *http.Request) {
 
-	tmpl, err := template.ParseFiles("./html/pages/homepage.html", "./html/templates/category.html", "./html/templates/header.html", "./html/templates/searchbar.html")
+	tmpl, err := template.ParseFiles("./html/pages/homepage.html", "./html/templates/category.html", "./html/templates/header.html", "./html/templates/searchbar.html", "./html/templates/contenu.html")
 	if err != nil {
 		println(err)
 	}

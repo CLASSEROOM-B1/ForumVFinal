@@ -39,5 +39,4 @@ body {
 }
 .postContainer {
   grid-area: 3 / 2 / 6 / 6;
-  background-color: yellow;
 }
