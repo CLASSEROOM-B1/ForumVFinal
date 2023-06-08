@@ -283,6 +283,15 @@ flex-direction: column;
         margin-left: 0px;
     }
 
+    .password {
+        gap: 0px;
+        display: unset;
+        width: 200px;
+        font-size: 15px;
+        text-align: center;
+        
+    }
+
 .profiletlogo {
     flex-direction: column;
     height: 90%;
@@ -305,11 +314,7 @@ flex-direction: column;
 }
 
 
-.password {
-    font-size: 15px;
-    width: 100%;
 
-}
 
 .logout {
     height: 40px;
@@ -444,6 +449,8 @@ flex-direction: column;
         height: 350px;
 
     }
+
+    
 
 }   
 
