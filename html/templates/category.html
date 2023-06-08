@@ -1,53 +1,146 @@
 {{ define "category"}}
 
-
-<button class="createButton"><img src="/static/images/ajouter-un-bouton.png" id="imageButton">
+<button class="createButton" id="createPost">
+    <img src="/static/images/ajouter-un-bouton.png" id="imageButton" />
     <p class="createAPost">create new post</p>
 </button>
-<div class="container_sep">
-    <div class="sep"></div>
-</div>
-<p class="title_categories">Categories</p>
-<div class="category_List">
-    <div class="ordi">
-        <div class="fruit"><img class="fruitsBig" src="/static/images/melon 1.png">Politics</div>
-        <div class="fruit"><img class="fruitsBig" src="/static/images/peach 2.png">Sports</div>
-        <div class="fruit"><img class="fruitsBig" src="/static/images/orange 1.png">High - Tech</div>
-        <div class="fruit"><img class="fruitsBig" src="/static/images/pear 1.png">Arts</div>
-        <div class="fruit"><img class="fruitsBig" src="/static/images/strawberry (1) 2.png">Tips / Tricks</div>
-        <div class="fruit"><img class="fruitsBig" src="/static/images/6238-raspberry 1.png">Movies / Shows
-        </div>
-        <div class="fruit"><img class="fruitsBig" src="/static/images/grapes 3.png">Society</div>
-        <div class="fruit"><img class="fruitsBig" src="/static/images/cherries.png">Musics</div>
-        <div class="fruit"><img class="fruitsBig" src="/static/images/watermelon 1.png">Gaming</div>
-        <div class="fruit"><img class="fruitsBig" src="/static/images/lemon 1.png">History / Learning</div>
-        <div class="fruit"><img class="fruitsBig" src="/static/images/apple 2.png">Food / Drinks</div>
-        <div class="fruit"><img class="fruitsBig" src="/static/images/mango 1.png">Travels</div>
+<div class="category-spaced">
+    <div class="container_sep">
+        <div class="sep"></div>
     </div>
-    <button class="collapsible">
-        <p>More ...</p>
-    </button>
-    <div class="content">
-        <div class="fruit"><img class="fruitsSmall" src="/static/images/melon 1.png">Politics</div>
-        <div class="fruit"><img class="fruitsSmall" src="/static/images/peach 2.png">Sports</div>
-        <div class="fruit"><img class="fruitsSmall" src="/static/images/orange 1.png">High - Tech</div>
-        <div class="fruit"><img class="fruitsSmall" src="/static/images/pear 1.png">Arts</div>
-        <div class="fruit"><img class="fruitsSmall" src="/static/images/strawberry (1) 2.png">Tips / Tricks
+    <div class="title-container">
+        <p class="title_categories">Categories</p>
+    </div>
+    <div class="category_List">
+        <div class="ordi">
+            <div class="fruit">
+                <img class="fruitsBig" src="/static/images/melon 1.png" /><a href="#">Politics</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsBig" src="/static/images/peach 2.png" /><a href="#">Sports</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsBig" src="/static/images/orange 1.png" /><a href="#">High - Tech</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsBig" src="/static/images/pear 1.png" /><a href="#">Arts</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsBig" src="/static/images/strawberry (1) 2.png" /><a href="#">Tips / Tricks</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsBig" src="/static/images/6238-raspberry 1.png" /><a href="#">Movies / Shows</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsBig" src="/static/images/grapes 3.png" /><a href="#">Society</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsBig" src="/static/images/cherries.png" /><a href="#">Musics</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsBig" src="/static/images/watermelon 1.png" /><a href="#">Gaming</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsBig" src="/static/images/lemon 1.png" /><a href="#">History / Learning</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsBig" src="/static/images/apple 2.png" /><a href="#">Food / Drinks</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsBig" src="/static/images/mango 1.png" /><a href="#">Travels</a>
+            </div>
         </div>
-        <div class="fruit"><img class="fruitsSmall" src="/static/images/6238-raspberry 1.png">Movies / Shows
+        <button class="collapsible">
+            <p>More ...</p>
+        </button>
+        <div class="content">
+            <div class="fruit">
+                <img class="fruitsSmall" src="/static/images/melon 1.png" /><a href="#">Politics</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsSmall" src="/static/images/peach 2.png" /><a href="#">Sports</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsSmall" src="/static/images/orange 1.png" /><a href="#">High - Tech</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsSmall" src="/static/images/pear 1.png" /><a href="#">Arts</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsSmall" src="/static/images/strawberry (1) 2.png" /><a href="#">Tips / Tricks</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsSmall" src="/static/images/6238-raspberry 1.png" /><a href="#">Movies / Shows</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsSmall" src="/static/images/grapes 3.png" /><a href="#">Society</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsSmall" src="./static/images/cherries.png" /><a href="#">Musics</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsSmall" src="/static/images/watermelon 1.png" /><a href="#">Gaming</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsSmall" src="/static/images/lemon 1.png" /><a href="#">History / Learning</a>
+            </div>
+            <div class="fruit">
+                <img class="fruitsSmall" src="/static/images/apple 2.png" /><a href="#">Food / Drink</a>s
+            </div>
+            <div class="fruit">
+                <img class="fruitsSmall" src="/static/images/mango 1.png" /><a href="#">Travels</a>
+            </div>
         </div>
-        <div class="fruit"><img class="fruitsSmall" src="/static/images/grapes 3.png">Society</div>
-        <div class="fruit"><img class="fruitsSmall" src="./static/images/cherries.png">Musics</div>
-        <div class="fruit"><img class="fruitsSmall" src="/static/images/watermelon 1.png">Gaming</div>
-        <div class="fruit"><img class="fruitsSmall" src="/static/images/lemon 1.png">History / Learning</div>
-        <div class="fruit"><img class="fruitsSmall" src="/static/images/apple 2.png">Food / Drinks</div>
-        <div class="fruit"><img class="fruitsSmall" src="/static/images/mango 1.png">Travels</div>
+    </div>
+    <div class="container_sep">
+        <div class="sep mobilefirst"></div>
+    </div>
+</div>
+<button class="contactUs" id="contactUs">
+    <img id="contactUsButton" src="/static/images/envoyer.png" />
+    <p class="createAPost">Contact Us</p>
+</button>
+
+<!-- pop up -->
+<div id="popup" class="popup">
+    <div class="popup-container">
+        <div class="newpost">New post :</div>
+        <div class="newpassword">
+            <div class="container-check">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="aaa" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Private ( friends only )
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="aaa" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault"> Public </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="aaa" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Authorize comments
+                    </label>
+                </div>
+            </div>
+            <label class="passwordpopup">
+                <div class="passwordtext">Title</div>
+                <input type="text" class="contentCreate titlepost" placeholder="Title" />
+            </label>
+            <label class="postContentText">
+                <textarea type="text" class="contentCreate textpost"
+                    placeholder="Type your message here ..."></textarea>
+            </label>
+        </div>
+        <button class="submit" id="submit">SUBMIT</button>
     </div>
 </div>
 
-<button class="contactUs"><img id="contactUsButton" src="/static/images/envoyer.png">
-    <p class="createAPost">Contact Us</p>
-</button>
+<div id="popupcontact">
+    <button class="submit" id="submit2">SUBMIT</button>
+</div>
+
 <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
@@ -63,5 +156,34 @@
             }
         });
     }
+
+    var link = document.querySelector("#createPost");
+    var link2 = document.querySelector("#submit");
+    var popup = document.getElementById("popup");
+
+    link.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        popup.style.display = "block";
+    });
+
+    link2.addEventListener("click", function (event) {
+        event.preventDefault();
+        popup.style.display = "none";
+    });
+    var link3 = document.querySelector("#contactUs");
+    var link4 = document.querySelector("#submit2");
+    var popup2 = document.getElementById("popupcontact");
+
+    link3.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        popup2.style.display = "block";
+    });
+
+    link4.addEventListener("click", function (event) {
+        event.preventDefault();
+        popup2.style.display = "none";
+    });
 </script>
 {{ end }}

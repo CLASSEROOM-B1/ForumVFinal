@@ -11,9 +11,6 @@ func main() {
 	fs := http.FileServer(http.Dir("./static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	// jss := http.FileServer(http.Dir("./js"))
-	// http.Handle("/js", http.StripPrefix("/js/", jss))
-
 	http.HandleFunc("/", HomePage)
 
 	fmt.Println("http://localhost:8080" + "aaa")

@@ -6,26 +6,25 @@
   background-color: transparent;
   position: fixed;
   top: 90%;
-  left: 2%;
+  right: 2%;
 }
 .category_List {
   display: flex;
   justify-content: center;
+  font-size: 15px;
+  gap: 15px;
+  margin-left: 5px;
 }
 .sep {
   border: 1px black solid;
   border-radius: 20px;
-  background: rgb(239, 56, 109);
-  background: linear-gradient(
-    90deg,
-    rgba(239, 56, 109, 1) 0%,
-    rgba(244, 105, 64, 1) 50%,
-    rgba(246, 143, 36, 1) 100%
-  );
-  height: 3px;
+  background-color: black;
+  height: 1px;
   width: 100px;
 }
 .container_sep {
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   justify-content: center;
 }
@@ -38,6 +37,16 @@
   cursor: pointer;
   background-size: auto;
   background-color: transparent;
+  font-size: 20px;
+}
+.title-container {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+  color: black;
 }
 
 #imageButton {
@@ -61,12 +70,17 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  height: 300px;
   overflow-x: hidden;
   overflow-y: auto;
 }
 .fruit {
   display: flex;
   align-items: center;
+  gap: 20px;
+}
+.category-spaced {
+  margin-top: 80px;
 }
 .fruitsBig {
   height: 20px;
@@ -149,4 +163,156 @@
     margin: 0;
     font-size: 1rem;
   }
+  .mobilefirst {
+    display: none;
+  }
+}
+
+/*pop up*/
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  background: transparent;
+  background-image: linear-gradient(90deg, white, white),
+    linear-gradient(90deg, #ef396c, #f69023);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 5px solid transparent;
+  cursor: pointer;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.newpassword {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.passwordpopup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.postContentText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.passwordtext {
+  width: 100px;
+  display: flex;
+  text-align: start;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 15px;
+}
+
+.contentCreate {
+  height: 30px;
+  border-radius: 25px;
+  width: 250px;
+  user-select: none;
+  padding: 5px;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 15px;
+  background-color: white;
+  border: black 1px solid;
+  padding-left: 15px;
+}
+
+.textpost {
+  resize: none;
+  height: 250px;
+  width: 500px;
+  padding-top: 15px;
+}
+
+.contentCreate::placeholder {
+  font-family: "Kodchasan", sans-serif;
+  font-size: 15px;
+  user-select: none;
+}
+
+.submit {
+  margin-top: 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  width: 150px;
+  height: 35px;
+  border: 2px solid black;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 15px;
+}
+.container-popup {
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+}
+.submit:hover {
+  background: transparent;
+
+  background-image: linear-gradient(90deg, white, white),
+    linear-gradient(90deg, #ef396c, #f69023);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  .popup {
+    width: 300px;
+    height: 600px;
+    font-size: 15px;
+  }
+  .textpost {
+    height: 250px;
+    width: 200px;
+  }
+}
+
+.newpost {
+  font-family: "Kodchasan", sans-serif;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.container-check {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+#popupcontact {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 400px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  background: transparent;
+  background-image: linear-gradient(90deg, white, white),
+    linear-gradient(90deg, #ef396c, #f69023);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 5px solid transparent;
+  cursor: pointer;
+  border-radius: 25px;
+  text-align: center;
 }
