@@ -16,73 +16,94 @@
 <body>
     <div class="all">
         <div class="all-data">
-            <div class="container-user-info">
-                <div class="user-info">
-                    <div class="container-title-user">
-                        <div class="title-user">
-                            @user
+            <div class="all-user-info-spacebar">
+                <div class="container-user-info">
+                    <div class="user-info">
+                        <div class="container-title-user">
+                            <div class="title-user">
+                                @user
+                            </div>
+                            <div class="image-user">
+                                <img src="/static/images/lychee.png" class="lychee">
+                            </div>
                         </div>
-                        <div class="image-user">
-                            <img src="/static/images/lychee.png" class="lychee">
+                        <br>
+                        <br>
+                        <div class="followers">
+                            <label for="followers">FOLLOWERS &ensp; | &ensp; 127 </label>
                         </div>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="followers">
-                        <label for="followers">FOLLOWERS &ensp; | &ensp; 127 </label>
-                    </div>
-                    <br>
-                    <div class="popup-biography">
+                        <br>
                         <div class="container-biography">
                             <div class="biography">
-                                <span class="open-popup">Biography ...</span>
+                                Biography ...
                             </div>
                         </div>
-                    </div>
-                    <div class="container-popup-content">
-                        <div class="popup-content">
-                            Biography
+    
+                        <br>
+                        <br>
+                        <form method="post">
+                            <div class="container-follow">
+                                <div class="follow">
+                                    <button class="button-follow" type="submit" value="Submit">FOLLOW</button>
+                                </div>
+                            </div>
                             <br>
-                            <input class="input-biography" placeholder="Biography" type="text" id="biography" name="biography">
-                        </div>
+                            <br>
+                            <div class="container-unfollow">
+                                <div class="unfollow">
+                                    <button class="button-unfollow" type="submit" value="Submit">UNFOLLOW</button>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="container-block">
+                                <div class="block">
+                                    <button class="button-block" type="submit" value="Submit">BLOCK</button>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="container-message">
+                                <div class="message">
+                                    <button class="button-message" type="submit" value="Submit">MESSAGE <img
+                                            src="/static/images/message.png" class="message-image"></button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <br>
-                    <br>
-                    <form method="post">
-                        <div class="container-follow">
-                            <div class="follow">
-                                <button class="button-follow" type="submit" value="Submit">FOLLOW</button>
-                            </div>
-                        </div>
-                        <br>
-                        <br>
-                        <div class="container-unfollow">
-                            <div class="unfollow">
-                                <button class="button-unfollow" type="submit" value="Submit">UNFOLLOW</button>
-                            </div>
-                        </div>
-                        <br>
-                        <br>
-                        <div class="container-block">
-                            <div class="block">
-                                <button class="button-block" type="submit" value="Submit">BLOCK</button>
-                            </div>
-                        </div>
-                        <br>
-                        <br>
-                        <div class="container-message">
-                            <div class="message">
-                                <button class="button-message" type="submit" value="Submit">MESSAGE <img
-                                        src="/static/images/message.png" class="message-image"></button>
-
-                            </div>
-                        </div>
-                    </form>
+                </div>
+                <div class="container-spacebar">
+                    <div class="spacebar">
+                    </div>
+                </div>
+            </div>
+            <div class="container-posts">
+                <div class="posts">
+                    POSTS
+                </div>
+                <br>
+                <div class="container-bar-post">
+                    <div class="bar-post"></div>
+                </div>
+                <div class="container-image-post">
+                    <div class="image-post">
+                        <img src="/static/images/any.png" class="cross">
+                    </div>
+                    <div class="indication-post">
+                        NO POSTS
+                    </div>
                 </div>
             </div>
         </div>
+        <br>
+        <br>
+        <div class="container-copyrigth">
+            <div class="copyrigth">
+                Copyright © 2023 Fruits Salade, all rights reserved.
+            </div>
+        </div>
     </div>
-    <script src="/script/popup-biography.js"></script>
+    </div>
 </body>
 
 </html>
