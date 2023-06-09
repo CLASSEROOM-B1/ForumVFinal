@@ -1,0 +1,159 @@
+body {
+    background-color: #F2F2F2;
+}
+
+.all-data {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.container-user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info{
+    margin-top: 20px;
+}
+
+.container-title-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-user {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 25px;
+}
+
+.lychee {
+    width: 45px;
+    height: 45px;
+}
+
+.followers{
+    display: flex;
+    justify-content: center;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.biography {
+    font-family: 'Kodchasan', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+
+.container-follow {
+    display: flex;
+    justify-content: center;
+}
+
+.button-follow {
+    font-family: 'Kodchasan', sans-serif;
+    height: 35px;
+    width: 200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+
+}
+
+.button-follow:hover {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(90deg, white, white),
+        linear-gradient(90deg, #ef396c, #f69023);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.container-unfollow {
+    display: flex;
+    justify-content: center;
+}
+
+.button-unfollow {
+    font-family: 'Kodchasan', sans-serif;
+    height: 35px;
+    width: 200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+
+}
+
+.button-unfollow:hover {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(90deg, white, white),
+        linear-gradient(90deg, #ef396c, #f69023);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.container-block {
+    display: flex;
+    justify-content: center;
+}
+
+.button-block {
+    font-family: 'Kodchasan', sans-serif;
+    height: 35px;
+    width: 200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+
+}
+
+.button-block:hover {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(90deg, white, white),
+        linear-gradient(90deg, #ef396c, #f69023);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.container-message {
+    display: flex;
+    justify-content: center;
+}
+
+.button-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kodchasan', sans-serif;
+    height: 35px;
+    width: 200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+
+}
+
+.button-message:hover {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(90deg, white, white),
+        linear-gradient(90deg, #ef396c, #f69023);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.message-image{
+    width: 25px;
+    height: 25px;
+}
