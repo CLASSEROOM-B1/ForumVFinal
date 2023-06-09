@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.cdnfonts.com/css/kodchasan" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/static/styles/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/header.css" media="all" />
     <title>Document</title>
 </head>
 <body>
-    <header></header>   
+    <header>
+        {{ template "header"}}
+    </header>   
 
     <div class="profiletlogo">
 
@@ -17,7 +21,7 @@
             <div class="titrelogo">
 
                  PROFIL 
-                <img src="ressources/cherry.png" class="cherry">
+                <img src="/static/images/cherry.png" class="cherry">
             <!-- <div class="cerise">
 
             </div> -->
@@ -62,14 +66,14 @@
             
             <div class="likedposts" id="likedposts">
                
-                <img src="ressources/croix.png" alt="Croix" class="croix">
+                <img src="/static/images/croix.png" alt="Croix" class="croix">
                 <p class="NLP">No Liked Posts</p>
             </div>
     
     
             <div class="ourposts" id="ourposts">
                
-                <img src="ressources/croix.png" alt="Croix" class="croix">
+                <img src="/static/images/croix.png" alt="Croix" class="croix">
                 <p class="NLP">No Posts</p>
             </div>
         </div>  
