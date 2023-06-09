@@ -1,0 +1,447 @@
+body {
+    background-color: #F2F2F2;
+}
+
+.all-data {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.container-register-info {
+    display: flex;
+    align-items: center;
+}
+
+.register-info{
+    margin-top: 20px;
+}
+
+.container-title-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-register {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 25px;
+}
+
+
+.strawberry {
+    width: 45px;
+    height: 45px;
+}
+
+.pseudo {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.input-pseudo {
+    height: 35px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50px;
+    border: black 1px solid;
+    padding-left: 10px;
+}
+
+#pseudo {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.email {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.input-email {
+    height: 35px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50px;
+    border: black 1px solid;
+    padding-left: 10px;
+}
+
+#email {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.password {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.input-password {
+    height: 35px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50px;
+    border: black 1px solid;
+    padding-left: 10px;
+}
+
+#password {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.confirm-password {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.input-confirm-password {
+    height: 35px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50px;
+    border: black 1px solid;
+    padding-left: 10px;
+}
+
+#confirm-password {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.container-registration {
+    display: flex;
+    justify-content: center;
+}
+
+.button-registration {
+    font-family: 'Kodchasan', sans-serif;
+    height: 35px;
+    width: 200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+
+}
+
+.button-registration:hover {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(90deg, white, white),
+        linear-gradient(90deg, #ef396c, #f69023);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.spacebar {
+    margin-top: 20px;
+    width: 4px;
+    height: 600px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 50px;
+}
+a {
+    text-decoration: none;
+    color: #ef396c;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ef396c;
+}
+
+.container-link-login {
+    display: flex;
+    justify-content: center;
+}
+
+.link-login {
+    font-size: 15px;
+    font-family: 'Kodchasan', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.container-copyrigth {
+    display: flex;
+    justify-content: center;
+}
+
+.copyrigth {
+    font-size: 15px;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+@media screen and (max-width: 1024px) {
+    .logo {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        margin-left: 10px;
+        width: 149px;
+        height: 175px;
+    }
+
+    .spacebar {
+        height: 600px;
+        margin-right: 20px;
+    }
+
+    .title-register {
+        font-size: 20px;
+    }
+
+    .strawberry {
+        width: 35px;
+        height: 35px;
+    }
+
+    .input-pseudo {
+        width: 220px;
+    }
+
+    .input-email {
+        width: 220px;
+    }
+
+    .input-password {
+        width: 220px;
+    }
+
+    .input-confirm-password {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .logo {
+        display: none;
+    }
+
+    .container-spacebar{
+        width: 100%;
+    }
+
+    .all-data{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .container-register-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-spacebar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .spacebar {
+        height: 2px;
+        width: 90%;
+        margin-right: 0px;
+    }
+
+    .register-info{
+        margin-top:50px;
+    }
+
+    .title-register {
+        font-size: 20px;
+    }
+
+    .strawberry {
+        width: 30px;
+        height: 30px;
+    }
+
+    .input-pseudo {
+        width: 190px;
+        height: 30px;
+    }
+
+    .input-email {
+        width: 190px;
+        height: 30px;
+    }
+
+    .input-password {
+        width: 190px;
+        height: 30px;
+    }
+
+    .input-confirm-password {
+        width: 190px;
+        height: 30px;
+    }
+
+    .button-registration {
+        font-size: 10px;
+        width: 120px;
+        height: 30px;
+    }
+
+    .link-login {
+        font-size: 10px;
+    }
+
+    .copyrigth {
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width: 376px) {
+    .logo {
+        display: none;
+    }
+
+    .container-spacebar{
+        width: 100%;
+    }
+
+    .all-data{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .container-register-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-spacebar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .spacebar {
+        height: 2px;
+        width: 90%;
+        margin-right: 0px;
+    }
+
+    .title-register {
+        font-size: 20px;
+    }
+
+    .container-title-register {
+        margin-top: 20px;
+    }
+
+    .register-info {
+        margin-bottom: 25px;
+    }
+
+    .strawberry {
+        width: 20px;
+        height: 20px;
+    }
+
+    .input-pseudo {
+        width: 170px;
+        height: 25px;
+    }
+
+    .input-email   {
+        width: 170px;
+        height: 25px;
+    }
+
+    .input-password {
+        width: 170px;
+        height: 25px;
+    }
+
+    .input-confirm-password {
+        width: 170px;
+        height: 25px;
+    }
+
+    .button-registration {
+        font-size: 10px;
+        width: 120px;
+        height: 25px;
+    }
+
+    .link-login {
+        font-size: 10px;
+    }
+
+    .copyrigth {
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width: 321px) {
+    .logo {
+        display: none;
+    }
+
+    .container-spacebar{
+        width: 100%;
+    }
+
+    .all-data{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .container-login-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-spacebar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .spacebar {
+        height: 2px;
+        width: 90%;
+        margin-right: 0px;
+    }
+
+    .login-info {
+        margin-left: 10px;
+    }
+
+    .input-pseudo {
+        width: 170px;
+        height: 25px;
+    }
+
+    .input-password {
+        width: 170px;
+        height: 25px;
+    }
+
+    .link-registration {
+        font-size: 8px;
+    }
+
+
+}

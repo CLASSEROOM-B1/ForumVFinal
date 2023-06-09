@@ -1,0 +1,380 @@
+body {
+    background-color: #F2F2F2;
+}
+
+.all-data {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.container-login-info {
+    display: flex;
+    align-items: center;
+}
+
+.container-title-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-login {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 25px;
+}
+
+.raspberrie {
+    width: 45px;
+    height: 45px;
+}
+
+.spacebar {
+    width: 4px;
+    height: 450px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 50px;
+}
+
+.pseudo {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.input-pseudo {
+    height: 35px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50px;
+    border: black 1px solid;
+    padding-left: 10px;
+}
+
+#pseudo {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.password {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.input-password {
+    height: 35px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50px;
+    border: black 1px solid;
+    padding-left: 10px;
+}
+
+#password {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.container-connection {
+    display: flex;
+    justify-content: center;
+}
+
+.button-connection {
+    font-family: 'Kodchasan', sans-serif;
+    height: 35px;
+    width: 200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+
+}
+
+.button-connection:hover {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(90deg, white, white),
+        linear-gradient(90deg, #ef396c, #f69023);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #ef396c;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ef396c;
+}
+
+.container-link-registration {
+    display: flex;
+    justify-content: center;
+}
+
+.link-registration {
+    font-size: 15px;
+    font-family: 'Kodchasan', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.container-copyrigth {
+    display: flex;
+    justify-content: center;
+}
+
+.copyrigth {
+    font-size: 15px;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+@media screen and (max-width: 1024px) {
+    .logo {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        margin-left: 10px;
+        width: 149px;
+        height: 175px;
+    }
+
+    .spacebar {
+        height: 400px;
+        margin-right: 20px;
+    }
+
+    .title-login {
+        font-size: 20px;
+    }
+
+    .raspberrie {
+        width: 35px;
+        height: 35px;
+    }
+
+    .input-pseudo {
+        width: 220px;
+    }
+
+    .input-password {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .logo {
+        display: none;
+    }
+
+    .container-spacebar{
+        width: 100%;
+    }
+
+    .all-data{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .container-login-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-spacebar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .spacebar {
+        height: 2px;
+        width: 90%;
+        margin-right: 0px;
+    }
+
+    .login-info{
+        margin-top:50px;
+    }
+
+    .title-login {
+        font-size: 20px;
+    }
+
+    .raspberrie {
+        width: 30px;
+        height: 30px;
+    }
+
+    .input-pseudo {
+        width: 190px;
+        height: 30px;
+    }
+
+    .input-password {
+        width: 190px;
+        height: 30px;
+    }
+
+    .button-connection {
+        font-size: 10px;
+        width: 150px;
+        height: 30px;
+    }
+
+    .link-registration {
+        font-size: 10px;
+    }
+
+    .copyrigth {
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width: 376px) {
+    .logo {
+        display: none;
+    }
+
+    .container-spacebar{
+        width: 100%;
+    }
+
+    .all-data{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .container-login-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-spacebar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .spacebar {
+        height: 2px;
+        width: 90%;
+        margin-right: 0px;
+    }
+
+    .title-login {
+        font-size: 20px;
+    }
+
+    .container-title-login {
+        margin-top: 20px;
+    }
+
+    .login-info {
+        margin-bottom: 25px;
+    }
+
+    .raspberrie {
+        width: 20px;
+        height: 20px;
+    }
+
+    .input-pseudo {
+        width: 170px;
+        height: 25px;
+    }
+
+    .input-password {
+        width: 170px;
+        height: 25px;
+    }
+
+    .button-connection {
+        font-size: 10px;
+        width: 100px;
+        height: 25px;
+    }
+
+    .link-registration {
+        font-size: 10px;
+    }
+
+    .copyrigth {
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width: 321px) {
+    .logo {
+        display: none;
+    }
+
+    .container-spacebar{
+        width: 100%;
+    }
+
+    .all-data{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .container-login-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-spacebar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .spacebar {
+        height: 2px;
+        width: 90%;
+        margin-right: 0px;
+    }
+
+    .login-info {
+        margin-left: 10px;
+    }
+
+    .input-pseudo {
+        width: 170px;
+        height: 25px;
+    }
+
+    .input-password {
+        width: 170px;
+        height: 25px;
+    }
+
+    .link-registration {
+        font-size: 8px;
+    }
+
+
+}

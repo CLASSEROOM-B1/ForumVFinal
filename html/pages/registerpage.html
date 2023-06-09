@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/styles/registerpage.css" media="all" />
+    <link href="https://fonts.cdnfonts.com/css/kodchasan" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/images/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/static/styles/header.css" media="all" />
+    <title>Register</title>
+</head>
+{{template "header"}}
+
+<body>
+    <div class="all">
+        <div class="all-data">
+            <div class="container-register-info">
+                <div class="register-info">
+                    <div class="container-title-register">
+                        <div class="title-register">
+                            REGISTER
+                        </div>
+                        <div class="image-register">
+                            <img src="/static/images/strawberry.png" class="strawberry">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <form method="post">
+                        <div class="pseudo">
+                            <label for="pseudo">Pseudo</label>
+                        </div>
+                        <br>
+                        <input class="input-pseudo" placeholder="Pseudo" type="text" id="pseudo" name="pseudo">
+                        <br>
+                        <br>
+                        <br>
+                        <div class="email">
+                            <label for="email">Email</label>
+                        </div>
+                        <br>
+                        <input class="input-email" placeholder="example@gmail.com" type="text" id="email" name="email">
+                        <br>
+                        <br>
+                        <br>
+                        <div class="password">
+                            <label for="password">Password</label>
+                        </div>
+                        <br>
+                        <input class="input-password" placeholder="**********" type="password" id="password" name="password">
+                        <br>
+                        <br>
+                        <br>
+                        <div class="confirm-password">
+                            <label for="confirm-password">Confirm Password</label>
+                        </div>
+                        <br>
+                        <input class="input-confirm-password" placeholder="**********" type="password" id="confirm-password" name="confirm-password">
+                        <br>
+                        <br>
+                        <br>
+                        <div class="container-registration">
+                            <div class="registration">
+                                <button class="button-registration" type="submit" value="Submit">REGISTRATION</button>
+                            </div>
+                        </div>
+                    </form>  
+                    <br>
+                    <div class="container-link-login">
+                        <div class="link-login">
+                            To log in, click <a href="/">here</a>
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+            <div class="container-spacebar">
+                <div class="spacebar">
+                </div>
+            </div>
+            <div class="container-logo">
+                <div class="logo">
+                    <img src="/static/images/Logo.png" class="logo">
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container-copyrigth">
+            <div class="copyrigth">
+                Copyright © 2023 Fruits Salade, all rights reserved.
+            </div>
+        </div>
+        </div>
+
+</body>
+
+</html>
