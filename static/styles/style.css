@@ -231,8 +231,7 @@ a {
     text-decoration: none;
     color: #fd4f5a;
 }
-
-a:hover {
+#passwordlink:hover {
     border-bottom: #ef396c 2px solid;
 }
 
