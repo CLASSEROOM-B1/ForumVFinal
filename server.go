@@ -22,7 +22,7 @@ func main() {
 // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 func HomePage(w http.ResponseWriter, r *http.Request) {
 
-	tmpl, err := template.ParseFiles("./html/pages/homepage.html", "./html/templates/category.html", "./html/templates/header.html", "./html/templates/searchbar.html", "./html/templates/contenu.html")
+	tmpl, err := template.ParseFiles("./html/pages/homepage.html", "./html/templates/category.html", "./html/templates/header.html", "./html/templates/searchbar.html", "./html/templates/contenu.html", "./html/templates/card.html", "./html/templates/commentaire.html")
 	if err != nil {
 		println(err)
 	}
