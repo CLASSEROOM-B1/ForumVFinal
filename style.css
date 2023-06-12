@@ -104,7 +104,17 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   gap: 10px;
+}
+.content-github2 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-right: 15px;
 }
 
 .content-language {
@@ -165,6 +175,7 @@ p {
   .aboutus-container {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
   }
   .leftpart {
     margin-top: 50px;
@@ -175,7 +186,7 @@ p {
   }
   .content {
     height: max-content;
-    width: 60%;
+    width: 90%;
     padding: 10px;
   }
   .rightpart {
@@ -183,6 +194,17 @@ p {
   }
   .content-logo {
     display: none;
+  }
+
+  .content-github {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .content-github2 {
+    font-size: 15px;
+    width: 20%;
+    text-align: center;
   }
 }
 
