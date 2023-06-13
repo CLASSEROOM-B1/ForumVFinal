@@ -2,16 +2,28 @@ package controller
 
 import (
 	"database/sql"
+	"encoding/json"
 	"fmt"
-	base "forum/API/db"
-	entity "forum/API/entity"
+	"forum/API/entity"
+	"log"
+	"net/http"
+	"strconv"
+	"strings"
 )
 
-func CreateComment(db *sql.DB, comment entity.Comment) {
+func CreateComment(w http.ResponseWriter, r *http.Request) {
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
+
+	var comment entity.Comment
+	if err := json.NewDecoder(r.Body).Decode(&comment); err != nil {
+		log.Fatal(err)
+	}
 
 	exec := "INSERT INTO Comment (creatorId, postId, message) VALUES (?,?,?)"
 	stmt, err := db.Prepare(exec)
@@ -26,14 +38,23 @@ func CreateComment(db *sql.DB, comment entity.Comment) {
 		fmt.Println(res)
 		return
 	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusCreated)
+	json.NewEncoder(w).Encode(comment)
 }
 
-func GetPostComments(db *sql.DB, id int) []entity.Comment {
+func GetPostComments(w http.ResponseWriter, r *http.Request) {
 	var postComments []entity.Comment
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
+
+	id, _ := strconv.Atoi(strings.Split(r.URL.Path, "/")[len(strings.Split(r.URL.Path, "/"))-1])
 
 	rows, err := db.Query("SELECT * FROM Comment WHERE postId = ?", id)
 	if err != nil {
@@ -56,17 +77,44 @@ func GetPostComments(db *sql.DB, id int) []entity.Comment {
 		panic(err)
 	}
 
-	return postComments
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(postComments)
 }
 
-func DeleteComment(db *sql.DB, id int) {
+func DeleteComment(w http.ResponseWriter, r *http.Request) {
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
 
-	_, err := db.Exec("DELETE FROM Comment WHERE id=?", id)
+	var userId int
+	if err := json.NewDecoder(r.Body).Decode(&userId); err != nil {
+		log.Fatal(err)
+	}
+
+	id, _ := strconv.Atoi(strings.Split(r.URL.Path, "/")[len(strings.Split(r.URL.Path, "/"))-1])
+
+	var creatorId int
+	err = db.QueryRow("SELECT userId FROM Comment WHERE id=?", id).Scan(&creatorId)
 	if err != nil {
 		panic(err)
 	}
+
+	if creatorId == userId {
+		_, err = db.Exec("DELETE FROM Comment WHERE id=?", id)
+		if err != nil {
+			panic(err)
+		}
+
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusOK)
+	} else {
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusBadRequest)
+	}
+
 }

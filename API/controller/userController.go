@@ -2,41 +2,74 @@ package controller
 
 import (
 	"database/sql"
+	"encoding/json"
 	"fmt"
-	base "forum/API/db"
-	entity "forum/API/entity"
-	middleware "forum/API/middleware"
+	"forum/API/entity"
+	"forum/API/middleware"
+	"log"
+	"net/http"
+	"strconv"
+	"strings"
 )
 
-func CreateUser(db *sql.DB, user entity.User) {
+var db *sql.DB
 
-	base.ConnectDb(db)
+func CreateUser(w http.ResponseWriter, r *http.Request) {
+
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
 
-	exec := "INSERT INTO User (pseudo, email, password, biography) VALUES (?,?,?,?)"
-	stmt, err := db.Prepare(exec)
-	if err != nil {
-		fmt.Println(err)
-		return
+	var user entity.User
+	if err := json.NewDecoder(r.Body).Decode(&user); err != nil {
+		log.Fatal(err)
 	}
 
-	res, err := stmt.Exec(user.Pseudo, user.Email, user.Password, user.Biography)
-	if err != nil {
-		fmt.Println(err)
-		fmt.Println(res)
-		return
+	if !VerifPseudo(user.Pseudo) {
+		if !VerifEmail(user.Email) {
+			exec := "INSERT INTO User (pseudo, email, password, biography) VALUES (?,?,?,?)"
+			stmt, err := db.Prepare(exec)
+			if err != nil {
+				fmt.Println(err)
+				return
+			}
+
+			user.Password, _ = middleware.HashPassword(user.Password)
+
+			res, err := stmt.Exec(user.Pseudo, user.Email, user.Password, user.Biography)
+			if err != nil {
+				fmt.Println(err)
+				fmt.Println(res)
+				return
+			}
+			w.Header().Set("Content-Type", "application/json")
+			w.WriteHeader(http.StatusCreated)
+			json.NewEncoder(w).Encode(user)
+		} else {
+			w.Header().Set("Content-Type", "application/json")
+			w.WriteHeader(http.StatusBadRequest)
+			json.NewEncoder(w).Encode(user)
+		}
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusBadRequest)
+		json.NewEncoder(w).Encode(user)
 	}
 
-	user.Password, _ = middleware.HashPassword(user.Password)
 }
 
-func GetUsers(db *sql.DB) []entity.User {
-	var users []entity.User
+func GetUsers(w http.ResponseWriter, r *http.Request) {
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
+
+	var users []entity.User
 
 	rows, err := db.Query("SELECT * FROM User")
 	if err != nil {
@@ -58,52 +91,112 @@ func GetUsers(db *sql.DB) []entity.User {
 		panic(err)
 	}
 
-	return users
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusCreated)
+	json.NewEncoder(w).Encode(users)
 }
 
-func GetOneUser(db *sql.DB, Pseudo string) entity.User {
+func GetOneUser(w http.ResponseWriter, r *http.Request) {
 	var user entity.User
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
 
-	err := db.QueryRow("SELECT * FROM User WHERE pseudo=?", Pseudo).Scan(&user.Id, &user.Pseudo, &user.Email, &user.Password, &user.Biography)
+	id, _ := strconv.Atoi(strings.Split(r.URL.Path, "/")[len(strings.Split(r.URL.Path, "/"))-1])
+
+	err = db.QueryRow("SELECT * FROM User WHERE id=?", id).Scan(&user.Id, &user.Pseudo, &user.Email, &user.Password, &user.Biography)
 	if err != nil {
 		panic(err)
 	}
 
-	return user
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusCreated)
+	json.NewEncoder(w).Encode(user)
 }
 
-func UpdateUser(db *sql.DB, param string, updater string, email string) {
+func UpdateUser(w http.ResponseWriter, r *http.Request) {
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
 
-	stmt, err := db.Prepare("UPDATE User SET " + param + "=? WHERE email=?")
+	type Updater struct {
+		Param   string `json:"param"`
+		Updater string `json:"updater"`
+		Id      int    `json:"id"`
+	}
+	var update Updater
+	if err := json.NewDecoder(r.Body).Decode(&update); err != nil {
+		log.Fatal(err)
+	}
+
+	stmt, err := db.Prepare("UPDATE User SET " + update.Param + "=? WHERE id=?")
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
-	res, err := stmt.Exec(updater, email)
+	res, err := stmt.Exec(update.Updater, update.Id)
 	if err != nil {
 		fmt.Println(err)
 		fmt.Println(res)
 		return
 	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
 }
 
-func VerifPseudo(db *sql.DB, pseudo string) bool {
-	var bool bool
-	var result string
+func LoginUser(w http.ResponseWriter, r *http.Request) {
+	var user entity.User
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
 
-	err := db.QueryRow("SELECT pseudo FROM User WHERE pseudo=?", pseudo).Scan(&result)
+	var userDecode entity.User
+	if err := json.NewDecoder(r.Body).Decode(&userDecode); err != nil {
+		log.Fatal(err)
+	}
+
+	err = db.QueryRow("SELECT * FROM User WHERE pseudo=?", userDecode.Pseudo).Scan(&user.Id, &user.Pseudo, &user.Email, &user.Password, &user.Biography)
+	if err != nil {
+		panic(err)
+	}
+
+	if middleware.CheckPasswordHash(userDecode.Password, user.Password) {
+		middleware.CreateCookie(w, r, user.Email)
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusAccepted)
+		json.NewEncoder(w).Encode(user)
+	} else {
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusBadRequest)
+	}
+
+}
+
+func VerifPseudo(pseudo string) bool {
+	var bool bool
+	var result string
+
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	defer db.Close()
+
+	err = db.QueryRow("SELECT pseudo FROM User WHERE pseudo=?", pseudo).Scan(&result)
 	if err != nil {
 		bool = true
 	}
@@ -111,15 +204,18 @@ func VerifPseudo(db *sql.DB, pseudo string) bool {
 	return bool
 }
 
-func VerifEmail(db *sql.DB, email string) bool {
+func VerifEmail(email string) bool {
 	var bool bool
 	var result string
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
 
-	err := db.QueryRow("SELECT email FROM User WHERE email=?", email).Scan(&result)
+	err = db.QueryRow("SELECT email FROM User WHERE email=?", email).Scan(&result)
 	if err != nil {
 		bool = true
 	}
@@ -127,15 +223,18 @@ func VerifEmail(db *sql.DB, email string) bool {
 	return bool
 }
 
-func VerifPassword(db *sql.DB, pseudo string, password string) bool {
+func VerifPassword(pseudo string, password string) bool {
 	var bool bool
 	var result string
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
 
-	err := db.QueryRow("SELECT password FROM User WHERE pseudo=?", pseudo).Scan(&result)
+	err = db.QueryRow("SELECT password FROM User WHERE pseudo=?", pseudo).Scan(&result)
 	if err != nil {
 		fmt.Println(err)
 	}

@@ -2,16 +2,33 @@ package controller
 
 import (
 	"database/sql"
+	"encoding/json"
 	"fmt"
-	base "forum/API/db"
-	entity "forum/API/entity"
+	"forum/API/entity"
+	"log"
+	"net/http"
+	"strconv"
+	"strings"
 )
 
-func CreateFollow(db *sql.DB, follow entity.Follow) {
+func CreateFollow(w http.ResponseWriter, r *http.Request) {
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
+
+	var follow entity.Follow
+	if err := json.NewDecoder(r.Body).Decode(&follow); err != nil {
+		log.Fatal(err)
+	}
+
+	try := db.QueryRow("SELECT * FROM Follow WHERE followerId=? AND userId=?", follow.FollowerId, follow.UserId)
+	if try == nil {
+		return
+	}
 
 	exec := "INSERT INTO Follow (followerId, userId) VALUES (?,?)"
 	stmt, err := db.Prepare(exec)
@@ -26,14 +43,23 @@ func CreateFollow(db *sql.DB, follow entity.Follow) {
 		fmt.Println(res)
 		return
 	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusCreated)
+	json.NewEncoder(w).Encode(follow)
 }
 
-func GetFollows(db *sql.DB, id int) []entity.User {
+func GetFollows(w http.ResponseWriter, r *http.Request) {
 	var follows []entity.User
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
+
+	id, _ := strconv.Atoi(strings.Split(r.URL.Path, "/")[len(strings.Split(r.URL.Path, "/"))-1])
 
 	rows, err := db.Query("SELECT * FROM Follow WHERE followerId = ?", id)
 	if err != nil {
@@ -62,15 +88,22 @@ func GetFollows(db *sql.DB, id int) []entity.User {
 		panic(err)
 	}
 
-	return follows
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(follows)
 }
 
-func GetFollowers(db *sql.DB, id int) []entity.User {
+func GetFollowers(w http.ResponseWriter, r *http.Request) {
 	var follows []entity.User
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
+
+	id, _ := strconv.Atoi(strings.Split(r.URL.Path, "/")[len(strings.Split(r.URL.Path, "/"))-1])
 
 	rows, err := db.Query("SELECT * FROM Follow WHERE UserId = ?", id)
 	if err != nil {
@@ -99,17 +132,44 @@ func GetFollowers(db *sql.DB, id int) []entity.User {
 		panic(err)
 	}
 
-	return follows
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(follows)
 }
 
-func DeleteFollow(db *sql.DB, id int) {
+func DeleteFollow(w http.ResponseWriter, r *http.Request) {
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
 
-	_, err := db.Exec("DELETE FROM Follow WHERE id=?", id)
+	var userId int
+	if err := json.NewDecoder(r.Body).Decode(&userId); err != nil {
+		log.Fatal(err)
+	}
+
+	id, _ := strconv.Atoi(strings.Split(r.URL.Path, "/")[len(strings.Split(r.URL.Path, "/"))-1])
+
+	var creatorId int
+	err = db.QueryRow("SELECT followerId FROM Follow WHERE id=?", id).Scan(&creatorId)
 	if err != nil {
 		panic(err)
 	}
+
+	if creatorId == userId {
+		_, err = db.Exec("DELETE FROM Follow WHERE id=?", id)
+		if err != nil {
+			panic(err)
+		}
+
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusOK)
+	} else {
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusBadRequest)
+	}
+
 }

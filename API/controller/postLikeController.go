@@ -2,16 +2,33 @@ package controller
 
 import (
 	"database/sql"
+	"encoding/json"
 	"fmt"
-	base "forum/API/db"
-	entity "forum/API/entity"
+	"forum/API/entity"
+	"log"
+	"net/http"
+	"strconv"
+	"strings"
 )
 
-func CreatePostLike(db *sql.DB, postLike entity.PostLike) {
+func CreatePostLike(w http.ResponseWriter, r *http.Request) {
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
+
+	var postLike entity.PostLike
+	if err := json.NewDecoder(r.Body).Decode(&postLike); err != nil {
+		log.Fatal(err)
+	}
+
+	try := db.QueryRow("SELECT * FROM PostLike WHERE postId=? AND userId=?", postLike.PostId, postLike.UserId)
+	if try == nil {
+		return
+	}
 
 	exec := "INSERT INTO PostLike (postId, userId) VALUES (?,?)"
 	stmt, err := db.Prepare(exec)
@@ -26,14 +43,61 @@ func CreatePostLike(db *sql.DB, postLike entity.PostLike) {
 		fmt.Println(res)
 		return
 	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusCreated)
+	json.NewEncoder(w).Encode(postLike)
 }
 
-func GetUserPostLiked(db *sql.DB, id int) []entity.Post {
-	var postsLiked []entity.Post
+func GetLikesOfPost(w http.ResponseWriter, r *http.Request) {
+	var postLikes []entity.PostLike
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
+
+	id, _ := strconv.Atoi(strings.Split(r.URL.Path, "/")[len(strings.Split(r.URL.Path, "/"))-1])
+
+	rows, err := db.Query("SELECT * FROM PostLike WHERE PostId = ?", id)
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		var postLike entity.PostLike
+		err := rows.Scan(&postLike.Id, &postLike.PostId, &postLike.UserId)
+		if err != nil {
+			panic(err)
+		}
+
+		postLikes = append(postLikes, postLike)
+	}
+
+	err = rows.Err()
+	if err != nil {
+		panic(err)
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(postLikes)
+}
+
+func GetUserPostLiked(w http.ResponseWriter, r *http.Request) {
+	var postsLiked []entity.Post
+
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	defer db.Close()
+
+	id, _ := strconv.Atoi(strings.Split(r.URL.Path, "/")[len(strings.Split(r.URL.Path, "/"))-1])
 
 	rows, err := db.Query("SELECT * FROM PostLike WHERE UserId = ?", id)
 	if err != nil {
@@ -62,17 +126,43 @@ func GetUserPostLiked(db *sql.DB, id int) []entity.Post {
 		panic(err)
 	}
 
-	return postsLiked
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(postsLiked)
 }
 
-func DeletePostLike(db *sql.DB, id int) {
+func DeletePostLike(w http.ResponseWriter, r *http.Request) {
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
 
-	_, err := db.Exec("DELETE FROM PostLike WHERE id=?", id)
+	var userId int
+	if err := json.NewDecoder(r.Body).Decode(&userId); err != nil {
+		log.Fatal(err)
+	}
+
+	id, _ := strconv.Atoi(strings.Split(r.URL.Path, "/")[len(strings.Split(r.URL.Path, "/"))-1])
+
+	var creatorId int
+	err = db.QueryRow("SELECT userId FROM PostLike WHERE id=?", id).Scan(&creatorId)
 	if err != nil {
 		panic(err)
+	}
+
+	if userId == creatorId {
+		_, err := db.Exec("DELETE FROM PostLike WHERE id=?", id)
+		if err != nil {
+			panic(err)
+		}
+
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusOK)
+	} else {
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusBadRequest)
 	}
 }

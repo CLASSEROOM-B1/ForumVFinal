@@ -2,16 +2,33 @@ package controller
 
 import (
 	"database/sql"
+	"encoding/json"
 	"fmt"
-	base "forum/API/db"
-	entity "forum/API/entity"
+	"forum/API/entity"
+	"log"
+	"net/http"
+	"strconv"
+	"strings"
 )
 
-func CreateBlockedUser(db *sql.DB, blockedUser entity.BlockedUser) {
+func CreateBlockedUser(w http.ResponseWriter, r *http.Request) {
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
+
+	var blockedUser entity.BlockedUser
+	if err := json.NewDecoder(r.Body).Decode(&blockedUser); err != nil {
+		log.Fatal(err)
+	}
+
+	try := db.QueryRow("SELECT * FROM BlockedUser WHERE userWhoBlockedId=? AND userBlockedId=?", blockedUser.UserWhoBlockedId, blockedUser.UserBlockedId)
+	if try == nil {
+		return
+	}
 
 	exec := "INSERT INTO BlockedUser (userWhoBlockedId, userBlockedId) VALUES (?,?)"
 	stmt, err := db.Prepare(exec)
@@ -26,14 +43,23 @@ func CreateBlockedUser(db *sql.DB, blockedUser entity.BlockedUser) {
 		fmt.Println(res)
 		return
 	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusCreated)
+	json.NewEncoder(w).Encode(blockedUser)
 }
 
-func GetBlockedUsers(db *sql.DB, id int) []entity.User {
+func GetBlockedUsers(w http.ResponseWriter, r *http.Request) {
 	var blockedUsers []entity.User
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
+
+	id, _ := strconv.Atoi(strings.Split(r.URL.Path, "/")[len(strings.Split(r.URL.Path, "/"))-1])
 
 	rows, err := db.Query("SELECT * FROM BlockedUser WHERE userWhoBlockedId = ?", id)
 	if err != nil {
@@ -62,17 +88,43 @@ func GetBlockedUsers(db *sql.DB, id int) []entity.User {
 		panic(err)
 	}
 
-	return blockedUsers
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(blockedUsers)
 }
 
-func DeleteBlockedUser(db *sql.DB, id int) {
+func DeleteBlockedUser(w http.ResponseWriter, r *http.Request) {
 
-	base.ConnectDb(db)
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	defer db.Close()
 
-	_, err := db.Exec("DELETE FROM BlockedUser WHERE id=?", id)
+	var userId int
+	if err := json.NewDecoder(r.Body).Decode(&userId); err != nil {
+		log.Fatal(err)
+	}
+
+	id, _ := strconv.Atoi(strings.Split(r.URL.Path, "/")[len(strings.Split(r.URL.Path, "/"))-1])
+
+	var creatorId int
+	err = db.QueryRow("SELECT userWhoBlockedId FROM BlockedUser WHERE id=?", id).Scan(&creatorId)
 	if err != nil {
 		panic(err)
+	}
+
+	if creatorId == userId {
+		_, err = db.Exec("DELETE FROM BlockedUser WHERE id=?", id)
+		if err != nil {
+			panic(err)
+		}
+
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusOK)
+	} else {
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusBadRequest)
 	}
 }
