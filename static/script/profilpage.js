@@ -1,4 +1,4 @@
-
+console.log("test");
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
 const likedpostcontents = document.getElementById('likedposts')
@@ -12,18 +12,15 @@ button1.classList.add('active');
 button1.addEventListener('click', () => {
     button1.classList.add('active');
     button2.classList.remove('active');
-    likedpostcontents.style.display ='none';
-    ourpostcontents.style.display='flex'
+    likedpostcontents.style.display = 'none';
+    ourpostcontents.style.display = 'flex'
 });
 
 button2.addEventListener('click', () => {
     button1.classList.remove('active');
     button2.classList.add('active');
-    
 
-    
 });
-
 
 button2.addEventListener('click', () => { 
     likedpostcontents.style.display ='flex';
@@ -37,13 +34,11 @@ button1.addEventListener('click', () => {
 
 let link = document.querySelector('#passwordlink');
 let link2 = document.querySelector('#submit');
-let popup = document.getElementById('popup');
+let popup = document.querySelector('.overlay');
 
 
 link.addEventListener('click', function(event) {
-  event.preventDefault(); 
-
- 
+  event.preventDefault();  
   popup.style.display = 'block';
 });
 
@@ -74,4 +69,3 @@ biographyElement.addEventListener('click', function() {
         biographyElement.textContent = newText || 'Biography ...';
     });
 });
-

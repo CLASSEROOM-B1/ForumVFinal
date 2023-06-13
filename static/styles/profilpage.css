@@ -1,198 +1,210 @@
-@import url('https://fonts.cdnfonts.com/css/kodchasan');
+/* -------------------------SCROLL BAR------------------------------ */
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: white;
+    /* color of the tracking area */
+    /* border:1px solid #C99393;
+    border-radius: 20px; */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #D9D9D9;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+}
+
+/* -------------------------SCROLL BAR------------------------------ */
+
 
 body {
-    margin: auto;
     background-color: #F2F2F2;
-    
+
 }
 
-header {
-    height: 75px;
-    background-color: rgb(234, 0, 0);
+.all-data {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.container-profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48%;
 }
 
 
-.profiletlogo {
-   
-    height: 90vh;
-    width: 100%;
+.container-title-profile {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
 }
 
-.border {
-    width: 4px;
-    height: 500px;
-    background-color: black;
-    border-radius: 10px;
+.title-profile {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 25px;
 }
 
-
-.profil {
-    width: 45%;
-    height: 75%;
-    
-
+.profile-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-
+    margin-bottom: 50px;
+    margin-left: 10px;
 }
 
 .cherry {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
 }
 
-
-
-
-
-.titrelogo {
-
-    width: 90%;
-    height: 50%;
-
+.followers {
     display: flex;
     justify-content: center;
-    align-items: center;
-
     font-family: 'Kodchasan', sans-serif;
-    font-size: 25px;
-    margin-bottom: 0;
-  
-    
 }
 
-h1 {
-    font-family: 'Kodchasan', sans-serif;
-    font-size: 25px;
-    margin-bottom: 0;
-    text-decoration: none;
+.viewfriends {
+    width: 25px;
+    height: 25px;
 }
 
-
-.friends {
-    font-family: 'Kodchasan', sans-serif;
-    font-size: 20px;
+.viewfriends:hover {
+    cursor: pointer;
 }
-
-
-.cerise {
-    width: 20%;
-    height: 80%;
-    background-image: url(ressources/cherry.png );
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    margin-left: 0;
-}
-
-
-.friendsbiographie {
-    width: 90%;
-    height: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-
-
-
 
 .biography {
-    font-family: 'Kodchasan', sans-serif;
-    font-size: 15px;
-}
-
-
-
-.pseudoemail {
-    width: 90%;
-    height: 100%;
- 
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    
+    justify-content: center;
+    font-family: 'Kodchasan', sans-serif;
 }
 
 .pseudo {
-    display: flex;
-    flex-direction: column;
     font-family: 'Kodchasan', sans-serif;
-    font-size: 16px;
-    gap: 10px;
-    align-items: center;
-    width: 60%;
-    height: 65%;
 }
 
-.pseudotext {
-   width: 80%;
-    display: flex;
-    justify-content: flex-start;
-
-}
-
-.pseudoinput {
+.input-pseudo {
     height: 35px;
-    border-radius: 25px;
     width: 300px;
-    user-select: none;
-    padding-left:10px;
     background-color: white;
+    border-radius: 50px;
     border: black 1px solid;
-    
+    padding-left: 10px;
 }
 
-.pseudoinput::placeholder {
-    font-family: 'Kodchasan Medium', sans-serif;
-    font-size: 15px;
-    user-select: none;
+#pseudo {
+    font-family: 'Kodchasan', sans-serif;
 }
-
 
 .email {
-    display: flex;
-    flex-direction: column;
-    
+    font-family: 'Kodchasan', sans-serif;
 }
 
-.password {
-    width: 95%;
-    height: 20%;
+.input-email {
+    height: 35px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50px;
+    border: black 1px solid;
+    padding-left: 10px;
+}
+
+#email {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #ef396c;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ef396c;
+}
+
+.change-password {
     font-family: 'Kodchasan', sans-serif;
     font-size: 15px;
-    gap: 5px;
-    display: flex;
-    justify-content: center;
-    
 }
 
-
-.logout {
-    background-color: rgb(255, 255, 255);
-     border-radius: 25px;
-     width: 200px;
-     height: 100px;
-     border: 2px solid black;
-     font-family: 'Kodchasan', sans-serif;
-    font-size: 15px;
-}   
-
-
-
-
-.logout:hover {
+.popup {
+    font-family: 'Kodchasan', sans-serif;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+    background-color: #ffffffcc;
+    padding: 20px;
     background: transparent;
-    
+    background-image: linear-gradient(90deg, white, white),
+        linear-gradient(90deg, #ef396c, #f69023);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 5px solid transparent;
+    border-radius: 25px;
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.616);
+}
+
+.newpassword {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.changepassword {
+    font-size: 25px;
+    text-align: center;
+}
+
+.passwordtext {
+    font-size: 15px;
+}
+
+.confirmpasswordtext {
+    font-size: 15px;
+}
+
+.passwordinput {
+    height: 30px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50px;
+    border: black 1px solid;
+    padding-left: 10px;
+}
+
+.submit {
+    margin-left: 150px;
+    font-family: 'Kodchasan', sans-serif;
+    height: 35px;
+    width: 200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+.submit:hover {
+    background: transparent;
+    padding: 0.5rem 1rem;
     background-image: linear-gradient(90deg, white, white),
         linear-gradient(90deg, #ef396c, #f69023);
     background-clip: padding-box, border-box;
@@ -202,62 +214,87 @@ h1 {
 }
 
 
-.posts {
+.container-logout {
     display: flex;
-    width: 47.5%;
+    justify-content: center;
+}
+
+.button-logout {
+    font-family: 'Kodchasan', sans-serif;
+    height: 35px;
+    width: 200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+
+}
+
+.button-logout:hover {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(90deg, white, white),
+        linear-gradient(90deg, #ef396c, #f69023);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+/* .container-spacebar {
+    height: 100vh;
+} */
+
+.spacebar {
+    margin-top: 50px;
+    /* margin-left: 200px; */
+    width: 4px;
+    height: 500px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.posts {
+    background-color: #F2F2F2;
+    display: flex;
+    width: 48%;
     height: 640px;
     flex-direction: column;
     margin-left: 20px;
-    
+
 }
 
-
-
 .buttonposts {
+    background-color: #F2F2F2;
     height: 10vh;
     width: 50%;
-    color: grey;
+    color: #aaaaaa;
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid #aaaaaa;
     font-family: 'Kodchasan', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     transition: border-bottom-color 0.5s ease;
-    
-    
-}
 
-a {
-    text-decoration: none;
-    color: #fd4f5a;
-}
 
-a:hover {
-    border-bottom: #ef396c 2px solid;
 }
-
 
 .buttons {
-display: flex;
-width: 100%;
+    display: flex;
+    width: 100%;
 }
-
-
-
 
 .buttonposts.active {
     border-bottom-color: rgb(0, 0, 0);
     color: black;
-   
 }
 
 #likedposts {
-display: none;
-align-items: center;
-justify-content: center;
-height: 100%;
-flex-direction: column;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
 }
 
 #ourposts {
@@ -266,210 +303,121 @@ flex-direction: column;
     justify-content: center;
     height: 100%;
     flex-direction: column;
-    }
+}
+
+.croix {
+    width: 60px;
+    height: 60px;
+}
 
 .NLP {
     font-family: 'Kodchasan', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
 }
 
-@media screen and (max-width: 1000px) { 
+.container-copyrigth {
+    display: flex;
+    justify-content: center;
+}
 
-    .border {
-        display: none;
+.copyrigth {
+    font-size: 15px;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+@media screen and (max-width : 2560px) {
+    /* .spacebar {
+        margin-left: 480px;
+    } */
+
+    /* .profile-info {
+        margin-left: 500px;
+    } */
+
+}
+
+@media screen and (max-width : 1440px) {
+    /* .profile-info {
+        margin-left: 200px;
+    } */
+
+    /* .spacebar {
+        margin-left: 200px;
+    } */
+}
+
+@media screen and (max-width : 1024px) {
+    .spacebar {
+        margin-left: 90px;
+    }
+
+    /* .profile-info {
+        margin-left: 100px;
+    }
+ */
+}
+
+@media screen and (max-width : 768px) {
+
+    .spacebar {
+        height: 600px;
+        margin: auto;
+    }
+
+    .title-profile {
+        font-size: 20px;
+    }
+
+    .followers {
+        margin-left: 15px;
+    }
+
+    .change-password {
+        font-size: 10px;
+    }
+
+    .cherry {
+        width: 35px;
+        height: 35px;
+    }
+
+    .input-pseudo {
+        width: 220px;
+    }
+
+    .input-email {
+        width: 220px;
     }
 
     .posts {
-        margin-left: 0px;
+        /* margin-right: 200px; */
+        margin: 0px;
     }
 
-    .password {
-        gap: 0px;
-        display: unset;
-        width: 200px;
-        font-size: 15px;
-        text-align: center;
-        
-    }
-
-.profiletlogo {
-    flex-direction: column;
-    height: 90%;
-
-}
-
-.pseudoinput {
-    height: 5vh;
-    border-radius: 25px;
-    width: 200px;
-    user-select: none;
-    padding-left:15px;
-    
-}
-
-
-
-.pseudotext {
-    width: 200px;
-}
-
-
-
-
-.logout {
-    height: 40px;
-    width: 200px;
-}
-
-
-
-
-
-.posts {
-    width: 90%;
-}
-}
-
-
-.croix {
-    width: 75px;
-    height: 75px;
-}
-
-
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 500px;
-    height: 400px   ;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    background: transparent;
-    background-image: linear-gradient(90deg, white, white),
-        linear-gradient(90deg, #ef396c, #f69023);
-    background-clip: padding-box, border-box;
-    background-origin: border-box;
-    border: 5px solid transparent;
-    cursor: pointer;
-    border-radius: 25px;
-    text-align: center;
-  }
- 
-  .newpassword {
-    width: 100%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-  }
-
-  .passwordpopup {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .passwordpopup2 {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  
-
-  .passwordtext {
-    width: 100px;
-    display: flex;
-    text-align: start;
-    font-family: 'Kodchasan', sans-serif;
-    font-size: 15px;
-}
-
-.confirmpasswordtext {
-    width: 200px;
-    display: flex;
-    text-align: start;
-    font-family: 'Kodchasan', sans-serif;
-    font-size: 15px;
-}
-
-.passwordinput {
-    height: 30px;
-    border-radius: 25px;
-    width: 250px;
-    user-select: none;
-    padding: 5px;
-    font-family: 'Kodchasan', sans-serif;
-    font-size: 15px;
-    background-color: white;
-    border: black 1px solid;
-    padding-left: 15px;
-  
-}
-
-.passwordinput::placeholder {
-    font-family: 'Kodchasan', sans-serif;
-    font-size: 15px;
-    user-select: none;  
-    
-}
-
-.submit {
-    background-color: rgb(255, 255, 255);
-     border-radius: 25px;
-     width: 150px;
-     height: 35px;
-     border: 2px solid black;
-     font-family: 'Kodchasan', sans-serif;
-    font-size: 15px;
-}
-
-
-
-
-.submit:hover {
-    background: transparent;
-    
-    background-image: linear-gradient(90deg, white, white),
-        linear-gradient(90deg, #ef396c, #f69023);
-    background-clip: padding-box, border-box;
-    background-origin: border-box;
-    border: 2px solid transparent;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 1000px) { 
-    .popup {
-        width: 300px;
-        height: 350px;
+    .profile-info {
+        margin: 0%;
 
     }
 
-    
-
-}   
-
-
-.changepassword {
-    font-family: 'Kodchasan', sans-serif;
-    font-size: 25px;
-    margin-bottom: 0; 
 }
 
+.container-spacebar {
+    width: 2%;
+}
 
-.biography-input {
-    width: 100%;
-    height: 30px;
-    padding-left:10px;
-    border-radius: 25px;
-    border: black 1px solid;
-    padding: 5px;
-    font-family: 'Kodchasan', sans-serif;
-    font-size: 15px;
-    background-color: white;
+@media screen and (max-width : 1050px) {
+    .all-data {
+        align-items: center;
+        flex-direction: column;
+    }
+    .spacebar {
+        display: none;
+    }
+    .posts {
+        margin-top: 50px;
+    }
+
+    #ourposts {
+        margin-bottom :200px;
+    }
 }

@@ -1,108 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/styles/profilpage.css" media="all" />
     <link href="https://fonts.cdnfonts.com/css/kodchasan" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/static/styles//profilpage.css" media="all" />
     <link rel="shortcut icon" href="/static/images/Logo.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/static/styles/header.css" media="all" />
-    <title>Document</title>
+    <title>Profile</title>
 </head>
+{{template "header"}}
+
 <body>
-    {{template "header"}}   
+    <div class="all">
+        <div class="all-data">
+            <div class="container-profile-info">
+                <div class="profile-info">
+                    <div class="container-title-profile">
+                        <div class="title-profile">
+                            PROFILE
+                        </div>
+                        <div class="image-profile">
+                            <img src="/static/images/cherry.png" class="cherry">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="followers">
+                        FOLLOWERS &ensp; | &ensp; 127 &ensp;<img src="/static/images/viewfriends.png"
+                            class="viewfriends">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="container-biography">
+                        <div class="biography">
+                            Biography ...
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <form method="post">
+                        <div class="pseudo">
+                            <label for="pseudo">PSEUDO</label>
+                        </div>
+                        <br>
+                        <input class="input-pseudo" placeholder="Pseudo" type="text" id="pseudo" name="pseudo">
+                        <br>
+                        <br>
+                        <br>
+                        <div class="email">
+                            <label for="email">EMAIL</label>
+                        </div>
+                        <br>
+                        <input class="input-email" placeholder="example@gmail.com" type="text" id="email" name="email">
+                        <br>
+                        <br>
+                        <br>
+                        <div class="change-password">
+                            Want to change your password ? <a href="#" id="passwordlink">click here</a>
+                        </div>
+                        <div class="password">
 
-    <div class="profiletlogo">
 
-        <div class="profil">
-            <div class="titrelogo">
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="container-logout">
+                            <div class="logout">
+                                <button class="button-logout" type="submit" value="Submit">LOGOUT</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="container-spacebar">
+                <div class="spacebar">
+                </div>
+            </div>
+            <div class="posts">
+                <div class="buttons">
+                    <button class="buttonposts" id="button1"> POSTS</button>
+                    <button class="buttonposts" id="button2"> LIKED POSTS</button>
+                </div>
+                <div class="likedposts" id="likedposts">
+                    <img src="/static/images/any.png" alt="Croix" class="croix">
+                    <p class="NLP">NO LIKED POSTS</p>
+                </div>
+                <div class="ourposts" id="ourposts">
+                    <img src="/static/images/any.png" alt="Croix" class="croix">
+                    <p class="NLP">NO POSTS</p>
+                </div>
+            </div>
+            <br>
+            <br>
 
-                 PROFIL 
-                <img src="/static/images/cherry.png" class="cherry">
-            <!-- <div class="cerise">
-
-            </div> -->
         </div>
-        <div class="friendsbiographie">
-            <div class="friends"> FRIENDS | 127</div>
-               
-            <div class="biography"> Biography ... </div>
+        <div class="overlay">
+            <div id="popup" class="popup">
+                <div class="changepassword"> Change password</div>
+                <br>
+                <br>
+                <br>
+                <div class="newpassword">
+                    <form method="post">
+                        <label class="passwordpopup">
+                            <div class="passwordtext">PASSWORD </div>
+                            <br>
+                            <input type="text" class="passwordinput" placeholder="*********">
+                        </label>
+                        <br>
+                        <br>
+                        <br>
+                        <label class="passwordpopup2">
+                            <div class="confirmpasswordtext"> CONFIRM PASSWORD </div>
+                            <br>
+                            <input type="text" class="passwordinput" placeholder="*********">
+                        </label>
+                </div>
 
+                <br>
+                <br>
+                <br>
+                <button class="submit" id="submit"> SUBMIT </button>
+                </form>
+            </div>
         </div>
-           <br>
-           <br>
-            <div class="pseudoemail">
-                <label class="pseudo"> <div class="pseudotext">Pseudo </div>
-                    <input type="text" class="pseudoinput" placeholder="test.test" readonly>
-                </label>
-                <label class="pseudo"> <div class="pseudotext"> Email </div> 
-                    <input type="text" class="pseudoinput" placeholder="example@gmail.com" readonly>
-                </label>
-                <p class="password"> Whant to change your password ? <a href="#" id="passwordlink">  click here </a></p>
-    
-                
+        <div class="container-copyrigth">
+            <div class="copyrigth">
+                Copyright © 2023 Fruits Salade, all rights reserved.
             </div>
-            <div class="password">
-    
-                
-            </div>
-        
-            <button class="logout"> Logout </button>
-                
-            
         </div>
-        <div class="border"></div>
-        <div class="posts">
-        
-            <div class="buttons">
-            <button class="buttonposts" id="button1"> Posts</button> 
-    
-            <button class="buttonposts" id="button2"> Liked Posts</button> 
-            </div>
-    
-            
-            <div class="likedposts" id="likedposts">
-               
-                <img src="/static/images/any.png" alt="Croix" class="croix">
-                <p class="NLP">No Liked Posts</p>
-            </div>
-    
-    
-            <div class="ourposts" id="ourposts">
-               
-                <img src="/static/images/any.png" alt="Croix" class="croix">
-                <p class="NLP">No Posts</p>
-            </div>
-        </div>  
-
-
-
-        
-
-
-    </div>
-    <br>
-    <br>
-
-    <div id="popup" class="popup">
-        <div class="changepassword"> Change password</div>
-
-        <div class="newpassword">
-            <label class="passwordpopup"> <div class="passwordtext">PASSWORD </div>
-                <input type="text" class="passwordinput" placeholder="*********" >
-            </label>
-            <label class="passwordpopup2"> <div class="confirmpasswordtext"> CONFIRM PASSWORD </div> 
-                <input type="text" class="passwordinput" placeholder="*********" >
-            </label>
-          
-
-            
-        </div>
-        <button class="submit" id="submit"> SUBMIT </button>
-        
-    </div>
-      <script src="/script/profilpage.js"></script>
 </body>
+<script src="/static/script/profilpage.js"></script>
 
 </html>
