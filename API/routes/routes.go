@@ -22,29 +22,30 @@ func RoutageNoConnect() {
 func RoutageConnect() {
 
 	http.HandleFunc("/API/users", controller.GetUsers)
-	http.HandleFunc("/API/user/{id}", controller.GetOneUser)
+	http.HandleFunc("/API/user/", controller.GetOneUser)
+	http.HandleFunc("/API/user/me", controller.GetUserConnected)
 
 	http.HandleFunc("/API/post/create", controller.CreatePost)
-	http.HandleFunc("/API/post/user/{id}", controller.GetUserPosts)
-	http.HandleFunc("/API/post/delete/{id}", controller.DeletePost)
+	http.HandleFunc("/API/post/user/", controller.GetUserPosts)
+	http.HandleFunc("/API/post/delete/", controller.DeletePost)
 
 	http.HandleFunc("/API/comment/create", controller.CreateComment)
-	http.HandleFunc("/API/comment/delete/{id}", controller.DeleteComment)
+	http.HandleFunc("/API/comment/delete/", controller.DeleteComment)
 
 	http.HandleFunc("/API/postLike/create", controller.CreatePostLike)
-	http.HandleFunc("/API/postLike/user/{id}", controller.GetUserPostLiked)
-	http.HandleFunc("/API/postLike/delete/{id}", controller.DeletePostLike)
+	http.HandleFunc("/API/postLike/user/", controller.GetUserPostLiked)
+	http.HandleFunc("/API/postLike/delete/", controller.DeletePostLike)
 
 	http.HandleFunc("/API/commentLike/create", controller.CreateCommentLike)
-	http.HandleFunc("/API/commentLike/delete/{id}", controller.DeleteCommentLike)
+	http.HandleFunc("/API/commentLike/delete/", controller.DeleteCommentLike)
 
 	http.HandleFunc("/API/follow/create", controller.CreateFollow)
-	http.HandleFunc("/API/follows/{id}", controller.GetFollows)
-	http.HandleFunc("/API/followers/{id}", controller.GetFollowers)
-	http.HandleFunc("/API/follow/delete/{id}", controller.DeleteFollow)
+	http.HandleFunc("/API/follows/", controller.GetFollows)
+	http.HandleFunc("/API/followers/", controller.GetFollowers)
+	http.HandleFunc("/API/follow/delete/", controller.DeleteFollow)
 
 	http.HandleFunc("/API/blockedUser/create", controller.CreateBlockedUser)
-	http.HandleFunc("/API/blockedUsers/{id}", controller.GetBlockedUsers)
-	http.HandleFunc("/API/blockedUser/delete/{id}", controller.DeleteBlockedUser)
+	http.HandleFunc("/API/blockedUsers/", controller.GetBlockedUsers)
+	http.HandleFunc("/API/blockedUser/delete/", controller.DeleteBlockedUser)
 
 }

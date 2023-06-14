@@ -118,6 +118,28 @@ func GetOneUser(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(user)
 }
 
+func GetUserConnected(w http.ResponseWriter, r *http.Request) {
+	var user entity.User
+
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	defer db.Close()
+
+	cookie, _ := r.Cookie("cookieForum")
+
+	err = db.QueryRow("SELECT * FROM User WHERE email=?", cookie.Value).Scan(&user.Id, &user.Pseudo, &user.Email, &user.Password, &user.Biography)
+	if err != nil {
+		panic(err)
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusCreated)
+	json.NewEncoder(w).Encode(user)
+}
+
 func UpdateUser(w http.ResponseWriter, r *http.Request) {
 
 	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
