@@ -22,20 +22,20 @@
     height: 30px;
 }
 
-.chat {
+.home {
     display: flex;
     flex-direction: column;
     justify-self: center;
     align-items: center;
 }
 
-.title-chat {
+.title-home {
     font-family: 'Kodchasan';
     cursor: pointer;
     font-size: 15px;
 }
 
-.chat-image {
+.home-image {
     width: 30px;
     height: 30px;
 }

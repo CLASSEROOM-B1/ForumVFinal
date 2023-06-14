@@ -600,4 +600,12 @@ a:hover {
         width: 350px;
         height: 350px;
     }
+
+    .popup {
+        width: 350px;
+        height: 350px;
+    }
+    .submit{
+        margin-bottom: 20px;
+    }
 }
