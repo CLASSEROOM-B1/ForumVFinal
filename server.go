@@ -16,6 +16,7 @@ func main() {
 	http.HandleFunc("/userprofil", UserProfilePage)
 	http.HandleFunc("/profil", ProfilPage)
 	http.HandleFunc("/aboutus", AboutUsPage)
+	http.HandleFunc("/", HomePage)
 
 	fmt.Println("http://localhost:8080/")
 	http.ListenAndServe(":8080", nil)
@@ -24,6 +25,15 @@ func main() {
 
 // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+func HomePage(w http.ResponseWriter, r *http.Request) {
+
+	tmpl, _ := template.ParseFiles("./html/pages/homepage.html", "./html/templates/header.html", "./html/templates/category.html", "./html/templates/commentaire.html", "./html/templates/contenu.html", "./html/templates/searchbar.html")
+
+	tmpl.Execute(w, "")
+
+}
+
 func LoginPage(w http.ResponseWriter, r *http.Request) {
 
 	tmpl, _ := template.ParseFiles("./html/pages/loginpage.html", "./html/templates/header.html")

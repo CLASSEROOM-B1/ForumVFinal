@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/styles/homepage.css" media="all" />
+    <link href="https://fonts.cdnfonts.com/css/kodchasan" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/styles/category.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/header.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/searchbar.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/contenu.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/card.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/commentaire.css" media="all" />
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            {{ template "header"}}
+        </div>
+
+        <div class="categoryContainer">
+            {{template "category"}}
+        </div>
+        <div class="searchBar">
+            {{template "searchbar"}}
+        </div>
+        <div class="postContainer">
+            {{template "contenu"}}
+        </div>
+
+    </div>
+</body>
+
+</html>

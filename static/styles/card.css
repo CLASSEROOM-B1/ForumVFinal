@@ -1,0 +1,353 @@
+.imgcard {
+  width: 30%;
+  height: 30%;
+}
+.cardpost {
+}
+
+.titre {
+  font-family: "kodchasan";
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.pseudo {
+  background-color: #ffffff;
+  width: 25%;
+  height: 90%;
+  font-family: "kodchasan";
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.milieu {
+  margin-top: 15px;
+  margin-right: 15px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: rgb(255, 255, 255);
+  width: 90%;
+  height: 55%;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.bas {
+  background-color: rgb(255, 255, 255);
+  width: 90%;
+  height: 25%;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categorie {
+  font-family: "kodchasan";
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.rs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 90%;
+  background-color: rgb(255, 255, 255);
+}
+
+.commentaires {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  height: 70%;
+  background-color: #ffffff;
+  gap: 5px;
+}
+
+img {
+  height: 50%;
+}
+
+.nbrcommentaires {
+  font-family: "kodchasan";
+  font-size: 15px;
+  font-weight: 500;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.likes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  height: 70%;
+  background-color: #ffffff;
+  gap: 5px;
+}
+
+.nbrlikes {
+  font-family: "kodchasan";
+  font-size: 15px;
+  font-weight: 500;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.partager {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  height: 70%;
+  background-color: #ffffff;
+  gap: 5px;
+}
+
+.share {
+  font-family: "kodchasan";
+  font-size: 15px;
+  font-weight: 500;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+.haut {
+  background-color: rgb(255, 255, 255);
+  width: 95%;
+  height: 25%;
+  border-radius: 25px 25px 0px 0px;
+  border-bottom: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.society {
+  width: 600px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  border: solid 4px #9a3af8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sports {
+  width: 600px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  border: solid 4px #ffa28d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.highTech {
+  width: 600px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  border: solid 4px #f88104;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.arts {
+  width: 600px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  border: solid 4px #a1d85c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tipsTricks {
+  width: 600px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  border: solid 4px #ec5352;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.politics {
+  width: 600px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  border: solid 4px #f7c569;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.moviesShows {
+  width: 600px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  border: solid 4px #ed1e1b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gaming {
+  width: 600px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  border: solid 4px #fc6c74;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.FoodDrinks {
+  width: 600px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  border: solid 4px #f44747;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.travels {
+  width: 600px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  border: solid 4px #fcc464;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.historyLearning {
+  width: 600px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  border: solid 4px #fbe22b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.musics {
+  width: 600px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  border: solid 4px #ec3c4c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*/
+/**/
+
+#commentcontainer {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  background: transparent;
+  background-image: linear-gradient(90deg, white, white),
+    linear-gradient(90deg, #ef396c, #f69023);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 5px solid transparent;
+  cursor: pointer;
+  border-radius: 25px;
+  text-align: center;
+}
+.title-comment {
+  height: 15%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 30px;
+  border-bottom: 2px solid black;
+}
+.contenu-comments {
+  height: 60%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.message {
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submitDiv {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-section {
+  margin-top: 15px;
+  font-size: 25px;
+}
+.messInput {
+  width: 80%;
+  height: 35px;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding-left: 15px;
+}
+.subbutton {
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  width: 150px;
+  height: 35px;
+  border: 2px solid black;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 15px;
+}
+.subbutton:hover {
+  background: transparent;
+
+  background-image: linear-gradient(90deg, white, white),
+    linear-gradient(90deg, #ef396c, #f69023);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.commentsmany {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+  .society {
+    width: 300px;
+    height: 500px;
+  }
+  .pseudo {
+    margin-right: 15px;
+  }
+  img {
+    height: 25%;
+  }
+  .rs {
+    width: auto;
+  }
+}

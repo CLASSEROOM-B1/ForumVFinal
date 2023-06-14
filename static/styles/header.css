@@ -1,127 +1,127 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .addpeople {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
 }
 
 .title-follow {
-    font-family: 'Kodchasan';
-    font-size: 15px;
-    cursor: pointer;
+  font-family: 'Kodchasan';
+  font-size: 15px;
+  cursor: pointer;
 }
 
 .addpeople-image {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .home {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
 }
 
 .title-home {
-    font-family: 'Kodchasan';
-    cursor: pointer;
-    font-size: 15px;
+  font-family: 'Kodchasan';
+  cursor: pointer;
+  font-size: 15px;
 }
 
 .home-image {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .profil {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
 }
 
 .title-profil {
-    font-family: 'Kodchasan';
-    cursor: pointer;
-    font-size: 15px;
+  font-family: 'Kodchasan';
+  cursor: pointer;
+  font-size: 15px;
 }
 
 .profil-image {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .about-us {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
 }
 
 .title-about-us {
-    font-family: 'Kodchasan';
-    cursor: pointer;
-    font-size: 15px;
+  font-family: 'Kodchasan';
+  cursor: pointer;
+  font-size: 15px;
 }
 
 .about-us-image {
-    width: 35px;
-    height: 35px;
+  width: 35px;
+  height: 35px;
 }
 
 @media screen and (max-width: 768px) {
-    .addpeople-image {
-        width: 25px;
-        height: 25px;
-    }
-    .home-image{
-        width: 25px;
-        height: 25px;
-    }
-    .profil-image{
-        width: 25px;
-        height: 25px;
-    }
-    .about-us-image{
-        width: 25px;
-        height: 25px;
-    }
+  .addpeople-image {
+      width: 25px;
+      height: 25px;
+  }
+  .home-image{
+      width: 25px;
+      height: 25px;
+  }
+  .profil-image{
+      width: 25px;
+      height: 25px;
+  }
+  .about-us-image{
+      width: 25px;
+      height: 25px;
+  }
 }
 
 @media  screen and (max-width: 426px) {
-    .addpeople-image {
-        width: 20px;
-        height: 20px;
-    }
-    .title-follow{
-        font-size: 10px;
-    }
-    .home-image{
-        width: 20px;
-        height: 20px;
-    }
-    .title-home{
-        font-size: 10px;
-    }
-    .profil-image{
-        width: 20px;
-        height: 20px;
-    }
-    .title-profil{
-        font-size: 10px;
-    }
-    .about-us-image{
-        width: 20px;
-        height: 20px;
-    }
-    .title-about-us{
-        font-size: 10px;
-    }
+  .addpeople-image {
+      width: 20px;
+      height: 20px;
+  }
+  .title-follow{
+      font-size: 10px;
+  }
+  .home-image{
+      width: 20px;
+      height: 20px;
+  }
+  .title-home{
+      font-size: 10px;
+  }
+  .profil-image{
+      width: 20px;
+      height: 20px;
+  }
+  .title-profil{
+      font-size: 10px;
+  }
+  .about-us-image{
+      width: 20px;
+      height: 20px;
+  }
+  .title-about-us{
+      font-size: 10px;
+  }
 }
