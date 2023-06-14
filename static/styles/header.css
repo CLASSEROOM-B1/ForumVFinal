@@ -81,7 +81,7 @@
         width: 25px;
         height: 25px;
     }
-    .chat-image{
+    .home-image{
         width: 25px;
         height: 25px;
     }
@@ -103,11 +103,11 @@
     .title-follow{
         font-size: 10px;
     }
-    .chat-image{
+    .home-image{
         width: 20px;
         height: 20px;
     }
-    .title-chat{
+    .title-home{
         font-size: 10px;
     }
     .profil-image{

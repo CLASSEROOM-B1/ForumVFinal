@@ -1,0 +1,278 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Kodchasan", sans-serif;
+}
+body {
+  background-color: #f2f2f2c3;
+}
+
+.aboutus-container {
+  margin-bottom: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+p {
+  margin: 2px;
+}
+
+.leftpart {
+  height: 700px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.separation {
+  margin-top: 50px;
+  /* margin-left: 200px; */
+  width: 4px;
+  height: 830px;
+  background-color: black;
+  border-radius: 10px;
+}
+.rightpart {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.titleText {
+  font-size: 25px;
+  font-family: 'Kodchasan', sans-serif;
+}
+.fruits{
+  width: 45px;
+    height: 45px;
+}
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+}
+.content-title {
+  font-weight: bold;
+
+  margin-bottom: 15px;
+  display: flex;
+
+  width: 100%;
+}
+.content-text {
+  font-size: 16px;
+}
+
+.content-text2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-textlogo {
+  display: flex;
+  gap: 10px;
+}
+
+.ynov-image{
+  width: 170px;
+  height: 100px;
+}
+
+.content-githubs {
+  width: 100%;
+  height: 25%;
+  display: flex;
+}
+
+.content-github {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  gap: 10px;
+}
+.content-github2 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-right: 15px;
+}
+
+.content-language {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  gap: 20px;
+}
+
+.languageimgs {
+  display: flex;
+  gap: 30px;
+}
+
+.gh {
+  width: 40px;
+  height: 40px;
+}
+
+.content-names {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content-label {
+  width: 50%;
+  display: flex;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.content-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-input {
+  height: 35px;
+  width: 40%;
+  border-radius: 25px;
+  background-color: white;
+  border: 1px solid black;
+  padding-left: 15px;
+}
+
+.content-input::placeholder {
+  font-family: "Kodchasan", sans-serif;
+}
+
+.main-content {
+  display: flex;
+}
+
+.message{
+  font-weight: bold;
+}
+
+
+.container-copyrigth {
+  display: flex;
+  justify-content: center;
+}
+
+.copyrigth {
+  font-size: 15px;
+  font-family: 'Kodchasan', sans-serif;
+}
+@media screen and (max-width: 1000px) {
+  body {
+    overflow: scroll;
+  }
+
+  .gh {
+    width: 40px;
+    height: 40px;
+  }
+  .titleText{
+    font-size: 30px;
+  }
+
+  .image {
+    width: 75px;
+    height: 75px;
+  }
+
+  .aboutus-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .leftpart {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .separation {
+    display: none;
+  }
+  .content {
+    height: max-content;
+    width: 90%;
+    padding: 10px;
+  }
+  .rightpart {
+    display: none;
+  }
+  .content-logo {
+    display: none;
+  }
+
+  .content-github {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .content-github2 {
+    font-size: 15px;
+    width: 20%;
+    text-align: center;
+  }
+  a{
+    font-size: 20px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width:1244px){
+  a{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width:426px){
+  a{
+    font-size: 10px;
+  }
+  .titleText{
+    font-size: 20px;
+  }
+
+  .content-input{
+    width: 150px;
+    height: 25px;
+    font-size: 10px;
+  }
+   .copyrigth {
+        font-size: 10px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:375px){
+  .copyright{
+    margin-top:20px;
+  }
+}
