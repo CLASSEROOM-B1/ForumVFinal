@@ -201,7 +201,7 @@ img {
   flex-direction: column;
   align-items: center;
 }
-.gamings {
+.gaming {
   width: 600px;
   height: 300px;
   background-color: rgb(255, 255, 255);
@@ -221,7 +221,7 @@ img {
   flex-direction: column;
   align-items: center;
 }
-.travel {
+.travels {
   width: 600px;
   height: 300px;
   background-color: rgb(255, 255, 255);
@@ -231,7 +231,7 @@ img {
   flex-direction: column;
   align-items: center;
 }
-.historylearning {
+.historyLearning {
   width: 600px;
   height: 300px;
   background-color: rgb(255, 255, 255);
