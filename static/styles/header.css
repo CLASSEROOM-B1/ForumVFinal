@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-self: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .title-follow {
@@ -20,6 +21,7 @@
 .addpeople-image {
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
 .home {
@@ -27,6 +29,7 @@
   flex-direction: column;
   justify-self: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .title-home {
@@ -38,6 +41,7 @@
 .home-image {
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
 .profil {
@@ -45,6 +49,7 @@
   flex-direction: column;
   justify-self: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .title-profil {
@@ -56,6 +61,7 @@
 .profil-image {
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
 .about-us {
@@ -63,6 +69,7 @@
   flex-direction: column;
   justify-self: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .title-about-us {
@@ -74,6 +81,7 @@
 .about-us-image {
   width: 35px;
   height: 35px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {

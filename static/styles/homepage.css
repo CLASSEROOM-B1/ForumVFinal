@@ -8,7 +8,7 @@ body {
   font-size: 1rem;
 }
 body {
-  background-color: #f2f2f2c3;
+  background-color: #F2F2F2;
 }
 
 .parent {
@@ -33,9 +33,9 @@ body {
   border-right: black 3px solid;
   margin-bottom: 5px;
 }
-.header {
+/* .header {
   grid-area: 1 / 1 / 2 / 6;
-}
+} */
 .searchBar {
   grid-area: 2 / 2 / 3 / 6;
 }
