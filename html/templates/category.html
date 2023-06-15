@@ -109,33 +109,37 @@
         <div class="newpost">New post :</div>
         <div class="newpassword">
             <div class="container-check">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="private" id="flexCheckDefault" />
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Private ( friends only )
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="public" id="flexCheckDefault" />
-                    <label class="form-check-label" for="flexCheckDefault"> Public </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="comments" id="flexCheckDefault" />
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Authorize comments
-                    </label>
-                </div>
+                <form>
+                    <select id="categorySearch">
+                    <option value="politics">Politics</option>
+                    <option value="sports">Sports</option>
+                    <option value="highTechs">High - Tech</option>
+                    <option value="arts">Arts</option>
+                    <option value="tipsTricks">Tips & Tricks</option>
+                    <option value="moviesShows">Movies & Shows</option>
+                    <option value="society">Society</option>
+                    <option value="musics">Musics</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="historyLearning">History & Learning</option>
+                    <option value="foodDrinks">Food & Drinks</option>
+                    <option value="travels">Travels</option>
+                    v
+                    </select>
+                  </form>
+                
+                
+                    
             </div>
             <label class="passwordpopup">
                 <div class="passwordtext">Title</div>
-                <input type="text" class="contentCreate titlepost" placeholder="Title" />
+                <input type="text" class="contentCreate titlepost" placeholder="Title" id="Title" />
             </label>
             <label class="postContentText">
-                <textarea type="text" class="contentCreate textpost"
+                <textarea type="text" class="contentCreate textpost" id="textArea"
                     placeholder="Type your message here ..."></textarea>
             </label>
         </div>
-        <button class="submit" id="submit">SUBMIT</button>
+        <button class="submit" id="submitPost" >SUBMIT</button>
     </div>
 </div>
 
@@ -160,7 +164,7 @@
     }
 
     var link = document.querySelector("#createPost");
-    var link2 = document.querySelector("#submit");
+    var link2 = document.querySelector("#submitPost");
     var popup = document.getElementById("popup");
 
     link.addEventListener("click", function (event) {

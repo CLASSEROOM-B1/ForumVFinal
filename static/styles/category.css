@@ -343,3 +343,15 @@ a {
   border-radius: 25px;
   text-align: center;
 }
+
+#categorySearch {
+
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 200px;
+  height: 25px;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 15px;
+
+}
