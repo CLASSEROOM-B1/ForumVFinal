@@ -1,13 +1,5 @@
 /* categorie */
-.contactUs {
-  border: none;
-  cursor: pointer;
-  background-size: auto;
-  background-color: transparent;
-  position: fixed;
-  top: 90%;
-  right: 2%;
-}
+
 .category_List {
   display: flex;
   justify-content: center;
@@ -19,30 +11,10 @@
   display: none;
 }
 
-.sep {
-  border: 1px black solid;
-  border-radius: 20px;
-  background-color: black;
-  height: 1px;
-  width: 100px;
-}
-.container_sep {
-  padding-top: 20px;
-  padding-bottom: 30px;
-  display: flex;
-  justify-content: center;
-}
 .content {
   display: none;
 }
 
-.createButton {
-  border: none;
-  cursor: pointer;
-  background-size: auto;
-  background-color: transparent;
-  font-size: 20px;
-}
 .title-container {
   display: flex;
   justify-content: center;
@@ -53,20 +25,6 @@ a {
   color: black;
 }
 
-#imageButton {
-  margin-top: 10px;
-  height: 40px;
-  width: 40px;
-}
-#contactUsButton {
-  margin-top: 10px;
-  height: 40px;
-  width: 40px;
-}
-.createAPost {
-  padding: 0;
-  margin: 0;
-}
 .collapsible {
   display: none;
 }
@@ -86,7 +44,7 @@ a {
   gap: 20px;
 }
 .category-spaced {
-  margin-top: 80px;
+  margin-top: 42px;
 }
 .fruitsBig {
   height: 20px;
@@ -124,6 +82,10 @@ a {
   }
   .postContainer {
     height: 100%;
+  }
+  .adduserContainer {
+    height: 500px;
+    width: 500px;
   }
   .header {
     height: 250px;
@@ -338,4 +300,16 @@ a {
   cursor: pointer;
   border-radius: 25px;
   text-align: center;
+}
+
+#categorySearch {
+
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 200px;
+  height: 25px;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 15px;
+
 }

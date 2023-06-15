@@ -11,3 +11,9 @@
   flex-direction: column;
   overflow-y: auto;
 }
+
+
+.voirplus {
+  background-color: transparent;
+  border-radius: 75px;
+}

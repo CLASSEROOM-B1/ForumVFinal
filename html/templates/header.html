@@ -14,8 +14,8 @@
         </div>
         <div class="container-addpeople">
             <div class="addpeople">
-                <a href="/addFriend">
-                    <img src="/static/images/addpeople1.png" class="addpeople-image">
+                <a onclick="addUserFunc()" id="adduserfunc">
+                    <img src="/static/images/addpeople.png" class="addpeople-image">
                 </a>
                 <div class="title-follow">
                     Follow
@@ -44,5 +44,45 @@
         </div>
     </div>
 </div>
+
+<div class="adduserContainer" id="adduserContainer">
+    <div class="contUser">
+        <form class="container-searchbar2" method="POST" action="/artists">
+            <input class="searchbar" type="text" placeholder="Search users here . . ." name="searchuser" />
+            <button class="searchimg">
+                <img class="imgloop" src="/static/images/search 1.png" />
+            </button>
+        </form>
+        <div class="usersContainer">
+            <div class="usersearched">@user</div>
+            <div class="usersearched">@user</div>
+            <div class="usersearched">@user</div>
+            <div class="usersearched">@user</div>
+            <div class="usersearched">@user</div>
+            <div class="usersearched">@user</div>
+            <div class="usersearched">@user</div>
+            <div class="usersearched">@user</div>
+            <div class="usersearched">@user</div>
+            <div class="usersearched">@user</div>
+            <div class="usersearched">@user</div>
+        </div>
+
+        <button id="doneadduser" class="doneadduser">
+            done
+        </button>
+    </div>
+</div>
+<script>
+    function addUserFunc() {
+        let link6 = document.querySelector('#doneadduser');
+        let popup3 = document.getElementById('adduserContainer');
+        popup3.style.display = 'block';
+        link6.addEventListener('click', function (event) {
+            event.preventDefault();
+            popup3.style.display = 'none';
+        });
+    }
+</script>
+
 
 {{end}}
