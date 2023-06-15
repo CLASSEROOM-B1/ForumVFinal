@@ -125,6 +125,10 @@ a {
   .postContainer {
     height: 100%;
   }
+  .adduserContainer {
+    height: 500px;
+    width: 500px;
+  }
   .header {
     height: 250px;
   }
