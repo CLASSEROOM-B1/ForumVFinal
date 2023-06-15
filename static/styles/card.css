@@ -141,7 +141,7 @@ img {
   flex-direction: column;
   align-items: center;
 }
-.sport {
+.sports {
   width: 600px;
   height: 300px;
   background-color: rgb(255, 255, 255);
@@ -151,7 +151,7 @@ img {
   flex-direction: column;
   align-items: center;
 }
-.hightech {
+.highTech {
   width: 600px;
   height: 300px;
   background-color: rgb(255, 255, 255);
@@ -161,7 +161,7 @@ img {
   flex-direction: column;
   align-items: center;
 }
-.art {
+.arts {
   width: 600px;
   height: 300px;
   background-color: rgb(255, 255, 255);
@@ -171,7 +171,7 @@ img {
   flex-direction: column;
   align-items: center;
 }
-.tipsandtricks {
+.tipsTricks {
   width: 600px;
   height: 300px;
   background-color: rgb(255, 255, 255);
@@ -181,7 +181,7 @@ img {
   flex-direction: column;
   align-items: center;
 }
-.politic {
+.politics {
   width: 600px;
   height: 300px;
   background-color: rgb(255, 255, 255);
@@ -191,7 +191,7 @@ img {
   flex-direction: column;
   align-items: center;
 }
-.movieandshow {
+.moviesShows {
   width: 600px;
   height: 300px;
   background-color: rgb(255, 255, 255);
@@ -211,7 +211,7 @@ img {
   flex-direction: column;
   align-items: center;
 }
-.foodanddrink {
+.FoodDrinks {
   width: 600px;
   height: 300px;
   background-color: rgb(255, 255, 255);
@@ -221,7 +221,7 @@ img {
   flex-direction: column;
   align-items: center;
 }
-.travel {
+.travels {
   width: 600px;
   height: 300px;
   background-color: rgb(255, 255, 255);
@@ -231,7 +231,7 @@ img {
   flex-direction: column;
   align-items: center;
 }
-.historylearning {
+.historyLearning {
   width: 600px;
   height: 300px;
   background-color: rgb(255, 255, 255);
