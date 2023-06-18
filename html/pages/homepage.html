@@ -13,20 +13,22 @@
     <link rel="stylesheet" type="text/css" href="/static/styles/card.css" media="all" />
     <link rel="stylesheet" type="text/css" href="/static/styles/commentaire.css" media="all" />
     <link href="https://fonts.cdnfonts.com/css/kodchasan" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/images/Logo.png" type="image/x-icon">
     <title>Home</title>
 </head>
 
 <body>
     <div class="main">
-            {{ template "header"}}
+        {{ template "header"}}
         <div class="container-all">
+            <br>
             <br>
             <br>
             <div class="container-categories">
                 <div class="categories">
                     <div class="container-create-post">
                         <div class="create-post">
-                            <img src="/static/images/addpost.png" class="addpost-image">
+                            <img src="/static/images/addpost.png" class="addpost-image" onclick="popupPost()">
                             <br>
                             <div class="title-create-post">
                                 &ensp; CREATE<br>NEW POST
@@ -53,7 +55,7 @@
                             <img src="/static/images/message.png" class="contact-image">
                             <br>
                             <div class="title-contact-us">
-                               CONTACT US
+                                CONTACT US
                             </div>
                         </div>
                     </div>
@@ -61,6 +63,44 @@
                         <div class="big-spacebar">
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="container-forum">
+                <div class="forum">
+                    {{template "searchbar"}}
+
+                    <br>
+                    <br>
+                    <div class="contenu">
+                        {{template "contenu"}}
+                    </div>
+                </div>
+            </div>
+            <div class="overlayPost" id="overlayPost">
+                <div class="container-popup" id="container-popup">
+                    <div class="title-popup">
+                        New post :
+                    </div>
+                    <div class="choice-select">
+                        <label for="category-select">Choose a category :</label>
+
+                        <select name="category" id="category-select">
+                            <option value="">Category</option>
+                            <option value="Politics">Politics</option>
+                            <option value="Sports">Sports</option>
+                            <option value="High - Tech">High - Tech</option>
+                            <option value="Arts">Arts</option>
+                            <option value="Tips / Tricks">Tips / Tricks</option>
+                            <option value="Movie / Shows">Movie / Shows</option>
+                            <option value="Society">Society</option>
+                            <option value="Musics">Musics</option>
+                            <option value="Gaming">Gaming</option>
+                            <option value="History / Learning">History / Learning</option>
+                            <option value="Food / Drink">Food / Drink</option>
+                            <option value="Travels">Travels</option>
+                        </select>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -73,9 +113,7 @@
             </div>
         </div>
     </div>
+    <script src="/static/scripts/popupPost.js"></script>
 </body>
-<script>
-
-</script>
 
 </html>

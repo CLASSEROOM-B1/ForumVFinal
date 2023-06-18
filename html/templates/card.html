@@ -6,22 +6,19 @@
                 <div class="imgcard">
                     <img id="fruitsImg" src="/static/images/grappes.png">
                 </div>
-                <div class="titre" id="titre">@titre</div>
+                <div class="titre" id="titre"> &ensp; Title</div>
             </div>
 
-            <div class="pseudo" id="pseudo"><a id="pseudoLink" href="#"> @pseudo</a></div>
+            <div class="pseudo" id="pseudo"><a id="pseudoLink" href="#"> @user</a></div>
 
         </div>
         <div class="milieu" id="message">
-            LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY. LOREM IPSUM HAS BEEN THE
-            INDUSTRY'S STANDARD
-            DUMMY TEXT EVER SINCE THE 1500S, WHEN AN UNKNOWN PRINTER TOOK A GALLEY OF TYPE AND SCRAMBLED IT TO MAKE A
-            TYPE
-            SPECIMEN.AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
 
         </div>
         <div class="bas">
-            <div class="categorie" id="category">@category</div>
+            <div class="categorie" id="category">society</div>
             <div class="rs">
                 <div id="commentpopup" class="commentaires">
 
@@ -33,53 +30,50 @@
                     <img src="/static/images/coeur.png">
                     <div class="nbrlikes"> 11</div>
                 </div>
-
-                <div class="partager">
-                    <img src="/static/images/fleche-droite-courbe.png">
-                    <div class="share"> share </div>
-
-                </div>
             </div>
         </div>
     </div>
 </div>
 
-
-
-
-<div class="commentcontainer" id="commentcontainer">
-    <div class="title-comment">
-        @titre
-    </div>
-    <div class="contenu-comments">
-        <div class="main-section">
-            Comments
+<div class="overlay" id="overlay">
+    <div class="commentcontainer" id="commentcontainer">
+        <div class="title-comment">
+            Title
         </div>
-        <div class="commentsmany">
-            {{ template "commentaire"}}
-            {{ template "commentaire"}}
-            {{ template "commentaire"}}
-            {{ template "commentaire"}}
+        <div class="contenu-comments">
+            <div class="main-section">
+                Comments
+            </div>
+            <div class="commentsmany">
+                {{ template "commentaire"}}
+                {{ template "commentaire"}}
+                {{ template "commentaire"}}
+                {{ template "commentaire"}}
+            </div>
         </div>
-    </div>
-    <div class="message">
-        <input type="text" placeholder="Type your message here ..." class="messInput">
-    </div>
-    <div class="submitDiv" id="submitDiv">
-        <button class="subbutton">Submit</button>
+        <form method = "post">
+            <br>
+            <br>
+        <div class="message">
+            <input type="text" placeholder="Type your message ..." class="messInput">
+        </div>
+        <br>
+            <div class="submitDiv" id="submitDiv">
+                <button class="subbutton">Submit</button>
+            </div>
+        </form>
     </div>
 </div>
-
 <script>
+
     function popupFunc() {
-        let link6 = document.querySelector('#submitDiv');
-        let popup3 = document.getElementById('commentcontainer');
-        popup3.style.display = 'block';
-        link6.addEventListener('click', function (event) {
+        let submitbutton = document.querySelector('#submitDiv');
+        let popupComment = document.getElementById('overlay');
+        popupComment.style.display = 'block';
+        submitbutton.addEventListener('click', function (event) {
             event.preventDefault();
-            popup3.style.display = 'none';
+            popupComment.style.display = 'none';
         });
     }
 </script>
-
 {{end}}
