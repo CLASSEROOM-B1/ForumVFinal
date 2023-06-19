@@ -29,8 +29,8 @@
                     <div class="nbrcommentaires"> 13</div>
                 </div>
                 <div class="likes">
-                    <img src="/static/images/coeur.png" id="postLikeImg">
-                    <div class="nbrlikes" id="postLike"> 11</div>
+                    <img src="/static/images/coeur.png">
+                    <div class="nbrlikes"> 11</div>
                 </div>
             </div>
         </div>
@@ -66,11 +66,11 @@
         </form>
     </div>
 </div>
-
 <script>
+
     function popupFunc() {
         let submitbutton = document.querySelector('#submitDiv');
-        let popupComment = document.querySelector('#overlay');
+        let popupComment = document.getElementById('overlay');
         popupComment.style.display = 'block';
         submitbutton.addEventListener('click', function (event) {
             event.preventDefault();

@@ -105,14 +105,14 @@ function initPost(post, div) {
                 newDiv.querySelector("#postLike").innerHTML = "0";
             }
         });
-    let popup3 = document.getElementById('commentcontainer');
-    let postLikeImg = newDiv.querySelector("#postLikeImg");
-    let commentImg = newDiv.querySelector("#commentImg");
-    postLikeImg.addEventListener("onclick", function (event) {
-        event.preventDefault();
+    // let popup3 = document.getElementById('commentcontainer');
+    // let postLikeImg = newDiv.querySelector("#postLikeImg");
+    // let commentImg = newDiv.querySelector("#commentImg");
+    // postLikeImg.addEventListener("onclick", function (event) {
+    //     event.preventDefault();
 
 
-    })
+    // })
     // commentImg.addEventListener("click", function (event) {
     //     event.preventDefault();
 
