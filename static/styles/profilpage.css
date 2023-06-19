@@ -346,7 +346,7 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.616);
 }
 
-.buttons-view-friend{
+.buttons-view-friend {
     display: flex;
 }
 
@@ -363,7 +363,7 @@ a:hover {
 .buttonfriends {
     background-color: white;
     height: 10vh;
-    width: 50%;
+    width: 33%;
     color: #aaaaaa;
     border-top: none;
     border-left: none;
@@ -373,10 +373,25 @@ a:hover {
     font-size: 15px;
     transition: border-bottom-color 0.5s ease;
 }
+
+.buttonfollows {
+    background-color: white;
+    height: 10vh;
+    width: 33%;
+    color: #aaaaaa;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #aaaaaa;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 15px;
+    transition: border-bottom-color 0.5s ease;
+}
+
 .buttonblock {
     background-color: white;
     height: 10vh;
-    width: 50%;
+    width: 33%;
     color: #aaaaaa;
     border-top: none;
     border-left: none;
@@ -396,7 +411,13 @@ a:hover {
     border-bottom-color: rgb(0, 0, 0);
     color: black;
 }
+
 .buttonblock.active {
+    border-bottom-color: rgb(0, 0, 0);
+    color: black;
+}
+
+.buttonfollows.active {
     border-bottom-color: rgb(0, 0, 0);
     color: black;
 }
@@ -410,6 +431,14 @@ a:hover {
 }
 
 #followers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+#follows {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -432,7 +461,7 @@ a:hover {
     font-size: 20px;
 }
 
-.closebutton{
+.closebutton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -506,7 +535,7 @@ a:hover {
 
 @media screen and (max-width : 768px) {
 
-    .popupFriend{
+    .popupFriend {
         width: 500px;
         height: 500px;
     }
@@ -562,32 +591,34 @@ a:hover {
         align-items: center;
         flex-direction: column;
     }
+
     .spacebar {
         display: none;
     }
+
     .posts {
         margin-top: 50px;
     }
 
     #ourposts {
-        margin-bottom :200px;
+        margin-bottom: 200px;
     }
 }
 
 
 
-@media screen and (max-width : 620px){
+@media screen and (max-width : 620px) {
     .popup {
         width: 400px;
         height: 400px;
     }
 
-    .popupFriend{
+    .popupFriend {
         width: 400px;
         height: 400px;
     }
 
-    .submit{
+    .submit {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -595,8 +626,8 @@ a:hover {
     }
 }
 
-@media screen and (max-width:530px){
-    .popupFriend{
+@media screen and (max-width:530px) {
+    .popupFriend {
         width: 350px;
         height: 350px;
     }
@@ -605,7 +636,8 @@ a:hover {
         width: 350px;
         height: 350px;
     }
-    .submit{
+
+    .submit {
         margin-bottom: 20px;
     }
 }

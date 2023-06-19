@@ -4,17 +4,18 @@
     <div class="header">
         <div class="container-home">
             <div class="home">
-                <a href="/home">
+                <a href="/">
                     <img src="/static/images/home.png" class="home-image">
                 </a>
                 <div class="title-home">
                     Home
                 </div>
+                
             </div>
         </div>
         <div class="container-addpeople">
             <div class="addpeople">
-                <a onclick="addUserFunc()" id="adduserfunc">
+                <a href="/follow">
                     <img src="/static/images/addpeople.png" class="addpeople-image">
                 </a>
                 <div class="title-follow">
@@ -72,17 +73,4 @@
         </button>
     </div>
 </div>
-<script>
-    function addUserFunc() {
-        let link6 = document.querySelector('#doneadduser');
-        let popup3 = document.getElementById('adduserContainer');
-        popup3.style.display = 'block';
-        link6.addEventListener('click', function (event) {
-            event.preventDefault();
-            popup3.style.display = 'none';
-        });
-    }
-</script>
-
-
 {{end}}

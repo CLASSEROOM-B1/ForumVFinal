@@ -1,6 +1,6 @@
 var submitButton = document.getElementById("submitRegister");
 
-submitButton.addEventListener("submit", function (event) {
+submitButton.addEventListener("click", function (event) {
     event.preventDefault();
     var pseudo = document.getElementById('pseudo').value;
     var email = document.getElementById('email').value;
@@ -24,6 +24,6 @@ submitButton.addEventListener("submit", function (event) {
                 return response.json();
             })
     } else {
-        //Bad password
+        //Bad request
     }
 });

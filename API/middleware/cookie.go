@@ -13,9 +13,9 @@ func ReadCookie(w http.ResponseWriter, r *http.Request) bool {
 	}
 }
 
-func DeleteCookie(w http.ResponseWriter, r *http.Request, pseudo string) {
+func DeleteCookie(w http.ResponseWriter, r *http.Request) {
 	c := http.Cookie{
-		Name:   pseudo,
+		Name:   "cookieForum",
 		MaxAge: -1}
 	http.SetCookie(w, &c)
 }

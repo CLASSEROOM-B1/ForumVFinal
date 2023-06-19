@@ -102,29 +102,21 @@ func DeleteBlockedUser(w http.ResponseWriter, r *http.Request) {
 
 	defer db.Close()
 
-	var userId int
-	if err := json.NewDecoder(r.Body).Decode(&userId); err != nil {
-		log.Fatal(err)
-	}
+	cookie, _ := r.Cookie("cookieForum")
 
-	id, _ := strconv.Atoi(strings.Split(r.URL.Path, "/")[len(strings.Split(r.URL.Path, "/"))-1])
-
-	var creatorId int
-	err = db.QueryRow("SELECT userWhoBlockedId FROM BlockedUser WHERE id=?", id).Scan(&creatorId)
+	var user entity.User
+	err = db.QueryRow("SELECT * FROM User WHERE email=?", cookie.Value).Scan(&user.Id, &user.Pseudo, &user.Email, &user.Password, &user.Biography)
 	if err != nil {
 		panic(err)
 	}
 
-	if creatorId == userId {
-		_, err = db.Exec("DELETE FROM BlockedUser WHERE id=?", id)
-		if err != nil {
-			panic(err)
-		}
+	id, _ := strconv.Atoi(strings.Split(r.URL.Path, "/")[len(strings.Split(r.URL.Path, "/"))-1])
 
-		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusOK)
-	} else {
-		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusBadRequest)
+	_, err = db.Exec("DELETE FROM BlockedUser WHERE userWhoBlockedId=? AND userBlockedId=?", user.Id, id)
+	if err != nil {
+		panic(err)
 	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
 }

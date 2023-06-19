@@ -120,6 +120,7 @@ img {
 .society {
   width: 600px;
   height: 250px;
+  margin-right: 30px;
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
   border: solid 4px #9a3af8;
@@ -131,6 +132,7 @@ img {
 .sports {
   width: 600px;
   height: 250px;
+  margin-right: 30px;
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
   border: solid 4px #ffa28d;
@@ -142,6 +144,7 @@ img {
 .highTech {
   width: 600px;
   height: 250px;
+  margin-right: 30px;
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
   border: solid 4px #f88104;
@@ -153,6 +156,7 @@ img {
 .arts {
   width: 600px;
   height: 250px;
+  margin-right: 30px;
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
   border: solid 4px #a1d85c;
@@ -164,6 +168,7 @@ img {
 .tipsTricks {
   width: 600px;
   height: 250px;
+  margin-right: 30px;
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
   border: solid 4px #ec5352;
@@ -175,6 +180,7 @@ img {
 .politics {
   width: 600px;
   height: 250px;
+  margin-right: 30px;
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
   border: solid 4px #f7c569;
@@ -186,6 +192,7 @@ img {
 .moviesShows {
   width: 600px;
   height: 250px;
+  margin-right: 30px;
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
   border: solid 4px #ed1e1b;
@@ -197,6 +204,7 @@ img {
 .gaming {
   width: 600px;
   height: 250px;
+  margin-right: 30px;
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
   border: solid 4px #fc6c74;
@@ -208,6 +216,7 @@ img {
 .FoodDrinks {
   width: 600px;
   height: 250px;
+  margin-right: 30px;
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
   border: solid 4px #f44747;
@@ -219,6 +228,7 @@ img {
 .travels {
   width: 600px;
   height: 250px;
+  margin-right: 30px;
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
   border: solid 4px #fcc464;
@@ -230,6 +240,7 @@ img {
 .historyLearning {
   width: 600px;
   height: 250px;
+  margin-right: 30px;
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
   border: solid 4px #fbe22b;
@@ -241,6 +252,7 @@ img {
 .musics {
   width: 600px;
   height: 250px;
+  margin-right: 30px;
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
   border: solid 4px #ec3c4c;
@@ -344,19 +356,23 @@ img {
 
 @media screen and (max-width: 1000px) {
   .society {
-    width: 300px;
-    height: 500px;
+    width: 500px;
+    height: 250px;
   }
 
   .pseudo {
     margin-right: 15px;
   }
 
+  #fruitsImg{
+    height: 30px;
+  }
+
   img {
-    height: 25%;
+    height: 20px;
   }
 
   .rs {
-    width: auto;
+    height: 20px;
   }
 }

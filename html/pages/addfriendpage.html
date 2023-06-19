@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/kodchasan" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/images/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/static/styles/addfriendpage.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/header.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/searchbar.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/searchUser.css" media="all" />
+
+    <title>Follow</title>
+</head>
+<body>
+    <div class="main">
+        {{template "header"}}
+        <div class="container-all">
+            <br>
+            <br>
+            <br>
+            {{template "searchbar"}}
+            <br>
+            <br>
+            <br>
+            <div class="searchUserContainer" id="searchUserContainer">
+                    <div class="commentsmany">
+                        {{ template "searchUser"}}
+                        {{ template "searchUser"}}
+                        {{ template "searchUser"}}
+                        {{ template "searchUser"}}
+                        {{ template "searchUser"}}
+                        {{ template "searchUser"}}
+                        {{ template "searchUser"}}
+                        {{ template "searchUser"}}
+                        {{ template "searchUser"}}
+                        {{ template "searchUser"}}
+                        {{ template "searchUser"}}
+                        {{ template "searchUser"}}
+                    </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container-copyrigth">
+            <div class="copyrigth">
+                Copyright © 2023 Fruits Salade, all rights reserved.
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

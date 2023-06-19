@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="/static/styles/header.css" media="all" />
     <link rel="stylesheet" type="text/css" href="/static/styles/card.css" media="all" />
     <link rel="stylesheet" type="text/css" href="/static/styles/commentaire.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/blockuser.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/followers.css" media="all" />
     <title>Profile</title>
 </head>
 {{template "header"}}
@@ -69,7 +71,9 @@
                         <br>
                         <div class="container-logout">
                             <div class="logout">
-                                <button class="button-logout" type="submit" value="Submit">LOGOUT</button>
+                                <form method="POST">
+                                    <button class="button-logout" id="logout">LOGOUT</button>
+                                </form>
                             </div>
                         </div>
                     </form>
@@ -99,7 +103,7 @@
             <br>
 
         </div>
-        <div class="overlay">
+        <div class="overlay" id="overlay">
             <div id="popup" class="popup">
                 <div class="changepassword"> Change password</div>
                 <br>
@@ -133,15 +137,20 @@
             <div id="popupFriend" class="popupFriend">
                 <div class="buttons-view-friend">
                     <button class="buttonfriends" id="button-friends"> FOLLOWERS</button>
+                    <button class="buttonfollows" id="button-follows"> FOLLOWS</button>
                     <button class="buttonblock" id="button-block"> BLOCKED USER</button>
                 </div>
                 <div class="blocked" id="blocked">
                     <img src="/static/images/any.png" alt="Croix" class="cross">
                     <p class="NBU">NO BLOCKED USER</p>
                 </div>
+                <div class="follows" id="follows">
+                    <img src="/static/images/any.png" alt="Croix" class="cross">
+                    <p class="NBU">NO FOLLOWS</p>
+                </div>
                 <div class="followers" id="followers">
                     <img src="/static/images/any.png" alt="Croix" class="cross">
-                    <p class="NF">NO FOLLOWERS</p>
+                    <p class="NBU">NO FOLLOWERS</p>
                 </div>
                 <div class="closebutton">
                     <button class="closepopup" id="closepopup"> CLOSE </button>

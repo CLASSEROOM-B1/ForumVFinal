@@ -2,6 +2,7 @@
 console.log("test");
 const form = document.getElementById('form');
 console.log(form);
+console.log(document.getElementById('message'));
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     const message = document.getElementById('message').value;
@@ -19,10 +20,13 @@ form.addEventListener('submit', (event) => {
             if (response.ok) {
                 alert('Message sent successfully!');
             } else {
+                console.error(message);
                 alert('Failed to send message.');
             }
         })
         .catch(error => {
+            console.error(message);
+
             console.error('Error sending message:', error);
             alert('Failed to send message.');
         });

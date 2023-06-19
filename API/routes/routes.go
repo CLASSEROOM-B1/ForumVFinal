@@ -2,6 +2,7 @@ package routes
 
 import (
 	"forum/API/controller"
+	"forum/API/middleware"
 	"net/http"
 )
 
@@ -16,6 +17,7 @@ func RoutageNoConnect() {
 	http.HandleFunc("/API/postLike/post/", controller.GetLikesOfPost)
 	http.HandleFunc("/API/commentLike/comment/", controller.GetLikesOfComment)
 	http.HandleFunc("/API/user/login", controller.LoginUser)
+	http.HandleFunc("/API/user/logout", middleware.DeleteCookie)
 	http.HandleFunc("/API/user/register", controller.CreateUser)
 
 }

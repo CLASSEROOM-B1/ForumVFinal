@@ -1,7 +1,5 @@
 var submitButton = document.getElementById("submitLogin");
 
-console.log(submitButton)
-
 submitButton.addEventListener("click", function (event) {
     event.preventDefault();
     console.log("test1")

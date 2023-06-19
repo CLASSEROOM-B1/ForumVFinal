@@ -100,15 +100,15 @@
                                 <option value="">Category</option>
                                 <option value="Politics">Politics</option>
                                 <option value="Sports">Sports</option>
-                                <option value="High - Tech">High - Tech</option>
+                                <option value="HighTech">High - Tech</option>
                                 <option value="Arts">Arts</option>
-                                <option value="Tips / Tricks">Tips / Tricks</option>
-                                <option value="Movie / Shows">Movie / Shows</option>
+                                <option value="TipsTricks">Tips / Tricks</option>
+                                <option value="MoviesShows">Movies / Shows</option>
                                 <option value="Society">Society</option>
                                 <option value="Musics">Musics</option>
                                 <option value="Gaming">Gaming</option>
-                                <option value="History / Learning">History / Learning</option>
-                                <option value="Food / Drink">Food / Drink</option>
+                                <option value="HistoryLearning">History / Learning</option>
+                                <option value="FoodDrink">Food / Drink</option>
                                 <option value="Travels">Travels</option>
                             </select>
                         </div>
@@ -135,14 +135,15 @@
                     <br>
                     <br>
                     <form type="submit" id="form">
-                        <label class="postContentText" for="message">
-                            <input type="text" class="contentCreate-textpost" id="message" name="message"
-                                placeholder="Type your message ..."></input>
-                        </label>
-                        <div class="container-submit" id="container-submit">
-                            <button class="submitcontact" id="submitContact">SUBMIT</button>
+                        <div class="input-contact">
+                            <input type="text" id="message" name="message" required class="content-input"
+                                placeholder="type your message ...">
+                            <!-- <img src="/static/images/message.png" class="message-image"> -->
                         </div>
                     </form>
+                    <div class="container-close" id="container-close">
+                        <button class="closepopup" id="closePopup">CLOSE</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -154,8 +155,9 @@
                 Copyright © 2023 Fruits Salade, all rights reserved.
             </div>
         </div>
-        <script src="/static/script/popupPost.js"></script>
-        <script type="module" src="/static/script/homePage.js"></script>
 </body>
+<script src="/static/script/popupPost.js"></script>
+<script type="module" src="/static/script/homePage.js"></script>
+<script src="/static/script/contact.js"></script>
 
 </html>
