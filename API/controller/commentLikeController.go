@@ -49,6 +49,44 @@ func CreateCommentLike(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(commentLike)
 }
 
+func GetLikesOfComment(w http.ResponseWriter, r *http.Request) {
+	var commentLikes []entity.CommentLike
+
+	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	defer db.Close()
+
+	id, _ := strconv.Atoi(strings.Split(r.URL.Path, "/")[len(strings.Split(r.URL.Path, "/"))-1])
+
+	rows, err := db.Query("SELECT * FROM CommentLike WHERE CommentId = ?", id)
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		var commentLike entity.CommentLike
+		err := rows.Scan(&commentLike.Id, &commentLike.CommentId, &commentLike.UserId)
+		if err != nil {
+			panic(err)
+		}
+
+		commentLikes = append(commentLikes, commentLike)
+	}
+
+	err = rows.Err()
+	if err != nil {
+		panic(err)
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(commentLikes)
+}
+
 func DeleteCommentLike(w http.ResponseWriter, r *http.Request) {
 
 	db, err := sql.Open("sqlite3", "API/db/dataBase.db")

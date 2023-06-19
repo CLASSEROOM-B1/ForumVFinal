@@ -45,6 +45,7 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 				fmt.Println(res)
 				return
 			}
+			middleware.CreateCookie(w, r, user.Email)
 			w.Header().Set("Content-Type", "application/json")
 			w.WriteHeader(http.StatusCreated)
 			json.NewEncoder(w).Encode(user)
@@ -53,6 +54,7 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 			w.WriteHeader(http.StatusBadRequest)
 			json.NewEncoder(w).Encode(user)
 		}
+	} else {
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusBadRequest)
 		json.NewEncoder(w).Encode(user)
@@ -92,7 +94,7 @@ func GetUsers(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusCreated)
+	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(users)
 }
 
@@ -114,7 +116,7 @@ func GetOneUser(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusCreated)
+	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(user)
 }
 
@@ -136,7 +138,7 @@ func GetUserConnected(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusCreated)
+	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(user)
 }
 
@@ -198,7 +200,7 @@ func LoginUser(w http.ResponseWriter, r *http.Request) {
 	if middleware.CheckPasswordHash(userDecode.Password, user.Password) {
 		middleware.CreateCookie(w, r, user.Email)
 		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusAccepted)
+		w.WriteHeader(http.StatusOK)
 		json.NewEncoder(w).Encode(user)
 	} else {
 		w.Header().Set("Content-Type", "application/json")

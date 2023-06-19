@@ -14,6 +14,7 @@ func RoutageNoConnect() {
 	http.HandleFunc("/API/post/category/", controller.GetPostsByCategory)
 	http.HandleFunc("/API/comment/", controller.GetPostComments)
 	http.HandleFunc("/API/postLike/post/", controller.GetLikesOfPost)
+	http.HandleFunc("/API/commentLike/comment/", controller.GetLikesOfComment)
 	http.HandleFunc("/API/user/login", controller.LoginUser)
 	http.HandleFunc("/API/user/register", controller.CreateUser)
 
