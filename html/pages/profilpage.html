@@ -9,6 +9,8 @@
     <link href="https://fonts.cdnfonts.com/css/kodchasan" rel="stylesheet">
     <link rel="shortcut icon" href="/static/images/Logo.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/static/styles/header.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/blockuser.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/followers.css" media="all" />
     <title>Profile</title>
 </head>
 {{template "header"}}
@@ -132,12 +134,20 @@
                     <button class="buttonblock" id="button-block"> BLOCKED USER</button>
                 </div>
                 <div class="blocked" id="blocked">
-                    <img src="/static/images/any.png" alt="Croix" class="cross">
-                    <p class="NBU">NO BLOCKED USER</p>
+                    {{template "blockeduser"}}
+                    {{template "blockeduser"}}
+                    {{template "blockeduser"}}
+                    {{template "blockeduser"}}
+                    <!-- <img src="/static/images/any.png" alt="Croix" class="cross"> -->
+                    <!-- <p class="NBU">NO BLOCKED USER</p> -->
                 </div>
                 <div class="followers" id="followers">
-                    <img src="/static/images/any.png" alt="Croix" class="cross">
-                    <p class="NF">NO FOLLOWERS</p>
+                    {{template "followers"}}
+                    {{template "followers"}}
+                    {{template "followers"}}
+                    {{template "followers"}}
+                    <!-- <img src="/static/images/any.png" alt="Croix" class="cross"> -->
+                    <!-- <p class="NF">NO FOLLOWERS</p> -->
                 </div>
                 <div class="closebutton">
                     <button class="closepopup" id="closepopup"> CLOSE </button>

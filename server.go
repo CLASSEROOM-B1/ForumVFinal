@@ -58,7 +58,7 @@ func UserProfilePage(w http.ResponseWriter, r *http.Request) {
 
 func ProfilPage(w http.ResponseWriter, r *http.Request) {
 
-	tmpl, _ := template.ParseFiles("./html/pages/profilpage.html", "./html/templates/header.html")
+	tmpl, _ := template.ParseFiles("./html/pages/profilpage.html", "./html/templates/header.html", "./html/templates/followers.html", "./html/templates/blockeduser.html")
 
 	tmpl.Execute(w, "")
 }
