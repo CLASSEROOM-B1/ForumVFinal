@@ -18,11 +18,13 @@
   cursor: pointer;
 }
 
+
 .addpeople-image {
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
+
 
 .home {
   display: flex;
@@ -43,6 +45,7 @@
   height: 30px;
   cursor: pointer;
 }
+
 
 .profil {
   display: flex;

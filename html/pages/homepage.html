@@ -135,18 +135,19 @@
                     <br>
                     <br>
                     <form type="submit" id="form">
-                        <label class="postContentText" for ="message">
-                            <input type="text" class="contentCreate-textpost" id="message" name="message"
-                                placeholder="Type your message ..."></input>
-                        </label>
-                        <div class="container-submit" id="container-submit">
-                            <button class="submitcontact" id="submitContact">SUBMIT</button>
+                        <div class="input-contact">
+                            <input type="text" id="message" name="message" required class="content-input"
+                                placeholder="type your message ...">
+                            <!-- <img src="/static/images/message.png" class="message-image"> -->
                         </div>
                     </form>
+                    <div class="container-close" id="container-close">
+                        <button class="closepopup" id="closePopup">CLOSE</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <br> 
+        <br>
         <br>
         <br>
         <div class="container-copyrigth">
@@ -154,7 +155,8 @@
                 Copyright © 2023 Fruits Salade, all rights reserved.
             </div>
         </div>
-        <script src="/static/script/popupPost.js"></script>
-</body>
+    </body>
+    <script src="/static/script/popupPost.js"></script>
+    <script src="/static/script/contact.js"></script>
 
 </html>

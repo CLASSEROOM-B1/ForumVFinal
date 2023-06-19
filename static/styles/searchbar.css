@@ -37,10 +37,11 @@ input:focus {
   .searchbar {
     font-size: 15px;
     height: 30px;
-    border: none;
-    padding: 5px;
+    padding-left: 10px;
   }
-  .searchimg {
-    width: auto;
+
+  .container-searchbar{
+    margin-top: -177px;
   }
+  
 }

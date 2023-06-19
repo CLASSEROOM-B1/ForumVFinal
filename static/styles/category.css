@@ -87,9 +87,6 @@ a {
     height: 500px;
     width: 500px;
   }
-  .header {
-    height: 250px;
-  }
 
   .categoryContainer {
     display: flex;
@@ -104,7 +101,7 @@ a {
     width: 100%;
     border: none;
     outline: none;
-    font-size: 25px;
+    font-size: 15px;
   }
   .category_List {
     display: unset;

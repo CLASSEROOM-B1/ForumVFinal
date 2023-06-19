@@ -33,7 +33,7 @@ for (i = 0; i < coll.length; i++) {
 
 //popup contact us
 let contactUsImage = document.getElementById('contactUs');
-let submitButtonContact = document.getElementById('submitContact');
+let submitButtonContact = document.getElementById('closePopup');
 let popupContact = document.getElementById('overlayContact');
 
 contactUsImage.addEventListener('click', function (event) {

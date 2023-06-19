@@ -1,0 +1,18 @@
+.comment-style {
+  font-family: 'Kodchasan';
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid gray;
+  width: 500px;
+  margin-top: 10px;
+  cursor: pointer;
+  
+}
+
+
+.username{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
