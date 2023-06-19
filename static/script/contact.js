@@ -1,9 +1,12 @@
 //---------------------------------MESSAGE BOT DISCORD------------------------------------------//
-
-const form = document.querySelector('form');
+console.log("test");
+const form = document.getElementById('form');
+console.log(form);
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     const message = document.getElementById('message').value;
+    // const webhookUrl = 'https://discord.com/api/webhooks/1099359183469555784/OJUNZMawEZv4F_TlWfQgVxvwbQlm3XnYetegVNaBDF8IDIqtJebsWLtAF02j6yehB55S';
+
     const webhookUrl = 'https://discord.com/api/webhooks/1118520342407819305/DuUEH2Q3xxCqfLba21oJqu0bUCDFr8IxteAD2TyAqlNrmsBVgyaj1ZlvP84SDI5r8dZi';
     fetch(webhookUrl, {
         method: 'POST',

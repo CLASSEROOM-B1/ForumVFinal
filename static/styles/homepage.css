@@ -160,7 +160,17 @@ body {
   background-color: rgba(0, 0, 0, 0.616);
 }
 
-#container-popup{
+#overlayContact {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.616);
+}
+
+#container-popup {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -175,18 +185,85 @@ body {
   text-align: center;
 }
 
-.title-popup{
+#container-popup-contact{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 400px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 3px solid hsl(120, 67%, 51%);
+  cursor: pointer;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.title-popup-contact {
+  font-family: 'Kodchasan';
+  font-size: 30px;
+}
+
+.title-popup {
   font-family: 'Kodchasan';
   font-size: 30px;
   border-bottom: 2px solid #2B99FF;
 }
 
-label{
+.titlepost{
+  display: flex;
+}
+
+.choice-select{
+  display: flex;
+  align-items: flex-start;
+}
+
+label {
   font-family: 'Kodchasan';
 }
 
-#category-select{
+#category-select {
   font-family: 'Kodchasan';
+}
+
+.contentCreate-titlepost {
+  font-family: 'Kodchasan';
+}
+
+.contentCreate-textpost {
+  font-family: 'Kodchasan';
+  user-select: none;
+  height: 150px;
+  width: 400px;
+}
+
+.submitpost{
+  border: 2px solid #2B99FF;
+  border-radius: 50px;
+  margin-top: 50px;
+  background-color: rgb(255, 255, 255);
+  width: 150px;
+  height: 35px;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  
+}
+
+
+.submitcontact{
+  border: 2px solid hsl(120, 67%, 51%);
+  border-radius: 50px;
+  margin-top: 50px;
+  background-color: rgb(255, 255, 255);
+  width: 150px;
+  height: 35px;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  
 }
 
 
