@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/styles/profilpage.css" media="all" />
+    <link href="https://fonts.cdnfonts.com/css/kodchasan" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/images/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/static/styles/header.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/card.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/commentaire.css" media="all" />
+    <title>Profile</title>
+</head>
+{{template "header"}}
+
+<body>
+    <div class="all">
+        <div class="all-data">
+            <div class="container-profile-info">
+                <div class="profile-info">
+                    <div class="container-title-profile">
+                        <div class="title-profile">
+                            PROFILE
+                        </div>
+                        <div class="image-profile">
+                            <img src="/static/images/cherry.png" class="cherry">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="followers">
+                        FOLLOWERS &ensp; | &ensp; <div id="nbFollow">127</div> &ensp;<img
+                            src="/static/images/viewfriends.png" class="viewfriends" id="viewfriends">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="container-biography">
+                        <div class="biography" id="biography">
+                            Biography ...
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <form method="post">
+                        <div class="pseudo">
+                            <label for="pseudo">PSEUDO</label>
+                        </div>
+                        <br>
+                        <input class="input-pseudo" placeholder="Pseudo" type="text" id="pseudo" name="pseudo">
+                        <br>
+                        <br>
+                        <br>
+                        <div class="email">
+                            <label for="email">EMAIL</label>
+                        </div>
+                        <br>
+                        <input class="input-email" placeholder="example@gmail.com" type="email" id="email" name="email">
+                        <br>
+                        <br>
+                        <br>
+                        <div class="change-password">
+                            Want to change your password ? <a href="#" id="passwordlink">click here</a>
+                        </div>
+                        <div class="password">
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="container-logout">
+                            <div class="logout">
+                                <button class="button-logout" type="submit" value="Submit">LOGOUT</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="container-spacebar">
+                <div class="spacebar">
+                </div>
+            </div>
+            <div class="posts">
+                <div class="buttons">
+                    <button class="buttonposts" id="button1"> POSTS</button>
+                    <button class="buttonposts" id="button2"> LIKED POSTS</button>
+                </div>
+                <div class="likedposts" id="likedposts">
+                    <img src="/static/images/any.png" alt="Croix" class="croix">
+                    <p class="NLP">NO LIKED POSTS</p>
+                    {{ template "card"}}
+                </div>
+                <div class="ourposts" id="ourposts">
+                    <img src="/static/images/any.png" alt="Croix" class="croix">
+                    <p class="NLP">NO POSTS</p>
+                    {{ template "card"}}
+                </div>
+            </div>
+            <br>
+            <br>
+
+        </div>
+        <div class="overlay">
+            <div id="popup" class="popup">
+                <div class="changepassword"> Change password</div>
+                <br>
+                <br>
+                <br>
+                <div class="newpassword">
+                    <form method="post">
+                        <label class="passwordpopup">
+                            <div class="passwordtext">PASSWORD </div>
+                            <br>
+                            <input type="password" class="passwordinput" placeholder="*********">
+                        </label>
+                        <br>
+                        <br>
+                        <br>
+                        <label class="passwordpopup2">
+                            <div class="confirmpasswordtext"> CONFIRM PASSWORD </div>
+                            <br>
+                            <input type="password" class="passwordinput" placeholder="*********">
+                        </label>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <button class="submit" id="submit"> SUBMIT </button>
+                </form>
+            </div>
+        </div>
+        <div class="overlayFriend">
+            <div id="popupFriend" class="popupFriend">
+                <div class="buttons-view-friend">
+                    <button class="buttonfriends" id="button-friends"> FOLLOWERS</button>
+                    <button class="buttonblock" id="button-block"> BLOCKED USER</button>
+                </div>
+                <div class="blocked" id="blocked">
+                    <img src="/static/images/any.png" alt="Croix" class="cross">
+                    <p class="NBU">NO BLOCKED USER</p>
+                </div>
+                <div class="followers" id="followers">
+                    <img src="/static/images/any.png" alt="Croix" class="cross">
+                    <p class="NF">NO FOLLOWERS</p>
+                </div>
+                <div class="closebutton">
+                    <button class="closepopup" id="closepopup"> CLOSE </button>
+                </div>
+            </div>
+        </div>
+        <div class="container-copyrigth">
+            <div class="copyrigth">
+                Copyright © 2023 Fruits Salade, all rights reserved.
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="/static/script/profilpage.js"></script>
+
+</html>

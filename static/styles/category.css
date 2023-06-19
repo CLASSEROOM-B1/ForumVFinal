@@ -1,0 +1,211 @@
+/* categorie */
+
+.category_List {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  gap: 15px;
+  margin-left: 5px;
+}
+.ordi::-webkit-scrollbar {
+  display: none;
+}
+
+.content {
+  display: none;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.collapsible {
+  display: none;
+}
+.ordi {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.fruit {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.category-spaced {
+  margin-top: 42px;
+}
+.fruitsBig {
+  height: 20px;
+  width: 20px;
+}
+.fruitsSmall {
+  height: 50px;
+  width: 50px;
+}
+.title_categories {
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 1000px) {
+  html,
+  body {
+    font-size: 2rem;
+  }
+  .parent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+  }
+  .ordi {
+    display: none;
+  }
+  .sep {
+    width: 500px;
+    height: 10px;
+  }
+  .postContainer {
+    height: 100%;
+  }
+  .adduserContainer {
+    height: 500px;
+    width: 500px;
+  }
+  .header {
+    height: 250px;
+  }
+
+  .categoryContainer {
+    display: flex;
+    align-items: center;
+    border: none;
+  }
+  .collapsible {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 25px;
+  }
+  .category_List {
+    display: unset;
+    margin-left: 0;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: 0.5rem;
+  }
+  .contactUs {
+    width: 300px;
+    position: initial;
+  }
+  #contactUsButton {
+    margin-top: 0;
+  }
+  .createButton {
+    width: 300px;
+  }
+  .createAPost {
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+  }
+  .mobilefirst {
+    display: none;
+  }
+  .container_sep {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .sep {
+    height: 1px;
+    width: 80%;
+  }
+  .category-spaced {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .popup {
+    width: 300px;
+    height: 600px;
+    font-size: 15px;
+  }
+  .textpost {
+    height: 250px;
+    width: 200px;
+  }
+}
+
+.newpost {
+  font-family: "Kodchasan", sans-serif;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.container-check {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+#popupcontact {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  background: transparent;
+  background-image: linear-gradient(90deg, white, white),
+    linear-gradient(90deg, #ef396c, #f69023);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 5px solid transparent;
+  cursor: pointer;
+  border-radius: 25px;
+  text-align: center;
+}
+
+#categorySearch {
+
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 200px;
+  height: 25px;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 15px;
+
+}

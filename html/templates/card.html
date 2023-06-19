@@ -1,0 +1,81 @@
+{{define "card"}}
+<div class="cardpost" id="cardpost">
+    <div class="society" id="backcolor">
+        <div class="haut">
+            <div class="gauche">
+                <div class="imgcard">
+                    <img id="fruitsImg" src="/static/images/grappes.png">
+                </div>
+                <div class="titre" id="titre"> &ensp; Title</div>
+            </div>
+
+            <div class="pseudo" id="pseudo"><a id="pseudoLink" href="#"> @user</a></div>
+
+        </div>
+        <div class="milieu" id="message">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+
+        </div>
+        <div class="bas">
+            <div class="categorie" id="category">society</div>
+            <div class="rs">
+                <div id="commentpopup" class="commentaires">
+
+                    <img src="/static/images/commentaire.png" onclick="popupFunc()">
+
+
+
+                    <div class="nbrcommentaires"> 13</div>
+                </div>
+                <div class="likes">
+                    <img src="/static/images/coeur.png" id="postLikeImg">
+                    <div class="nbrlikes" id="postLike"> 11</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overlay" id="overlay">
+    <div class="commentcontainer" id="commentcontainer">
+        <div class="title-comment">
+            Title
+        </div>
+        <div class="contenu-comments">
+            <div class="main-section">
+                Comments
+            </div>
+            <div class="commentsmany">
+                {{ template "commentaire"}}
+                {{ template "commentaire"}}
+                {{ template "commentaire"}}
+                {{ template "commentaire"}}
+            </div>
+        </div>
+        <form method="post">
+            <br>
+            <br>
+            <div class="message">
+                <input type="text" placeholder="Type your message ..." class="messInput">
+            </div>
+            <br>
+            <div class="submitDiv" id="submitDiv">
+                <button class="subbutton">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function popupFunc() {
+        let submitbutton = document.querySelector('#submitDiv');
+        let popupComment = document.querySelector('#overlay');
+        popupComment.style.display = 'block';
+        submitbutton.addEventListener('click', function (event) {
+            event.preventDefault();
+            popupComment.style.display = 'none';
+        });
+    }
+</script>
+{{end}}

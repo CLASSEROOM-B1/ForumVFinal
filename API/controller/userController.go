@@ -28,8 +28,8 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 
-	if !VerifPseudo(user.Pseudo) {
-		if !VerifEmail(user.Email) {
+	if VerifPseudo(user.Pseudo) {
+		if VerifEmail(user.Email) {
 			exec := "INSERT INTO User (pseudo, email, password, biography) VALUES (?,?,?,?)"
 			stmt, err := db.Prepare(exec)
 			if err != nil {
@@ -52,17 +52,16 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 		} else {
 			w.Header().Set("Content-Type", "application/json")
 			w.WriteHeader(http.StatusBadRequest)
-			json.NewEncoder(w).Encode(user)
 		}
 	} else {
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusBadRequest)
-		json.NewEncoder(w).Encode(user)
 	}
 
 }
 
 func GetUsers(w http.ResponseWriter, r *http.Request) {
+	var users []entity.User
 
 	db, err := sql.Open("sqlite3", "API/db/dataBase.db")
 	if err != nil {
@@ -70,8 +69,6 @@ func GetUsers(w http.ResponseWriter, r *http.Request) {
 	}
 
 	defer db.Close()
-
-	var users []entity.User
 
 	rows, err := db.Query("SELECT * FROM User")
 	if err != nil {

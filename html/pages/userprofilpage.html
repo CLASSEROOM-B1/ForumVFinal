@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/styles/userprofilpage.css" media="all" />
+    <link href="https://fonts.cdnfonts.com/css/kodchasan" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/images/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/static/styles/header.css" media="all" />
+    <title>User</title>
+</head>
+{{template "header"}}
+
+<body>
+    <div class="all">
+        <div class="all-data">
+            <div class="all-user-info-spacebar">
+                <div class="container-user-info">
+                    <div class="user-info">
+                        <div class="container-title-user">
+                            <div class="title-user">
+                                @user
+                            </div>
+                            <div class="image-user">
+                                <img src="/static/images/lychee.png" class="lychee">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="followers">
+                            <label for="followers">FOLLOWERS &ensp; | &ensp; 127 </label>
+                        </div>
+                        <br>
+                        <div class="container-biography">
+                            <div class="biography">
+                                Biography ...
+                            </div>
+                        </div>
+    
+                        <br>
+                        <br>
+                        <form method="post">
+                            <div class="container-follow">
+                                <div class="follow">
+                                    <button class="button-follow" type="submit" value="Submit">FOLLOW</button>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="container-unfollow">
+                                <div class="unfollow">
+                                    <button class="button-unfollow" type="submit" value="Submit">UNFOLLOW</button>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="container-block">
+                                <div class="block">
+                                    <button class="button-block" type="submit" value="Submit">BLOCK</button>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="container-message">
+                                <div class="message">
+                                    <button class="button-message" type="submit" value="Submit">MESSAGE <img
+                                            src="/static/images/message.png" class="message-image"></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="container-spacebar">
+                    <div class="spacebar">
+                    </div>
+                </div>
+            </div>
+            <div class="container-posts">
+                <div class="posts">
+                    POSTS
+                </div>
+                <br>
+                <div class="container-bar-post">
+                    <div class="bar-post"></div>
+                </div>
+                <div class="container-image-post">
+                    <div class="image-post">
+                        <img src="/static/images/any.png" class="cross">
+                    </div>
+                    <div class="indication-post">
+                        NO POSTS
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container-copyrigth">
+            <div class="copyrigth">
+                Copyright © 2023 Fruits Salade, all rights reserved.
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

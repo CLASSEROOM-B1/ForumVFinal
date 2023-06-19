@@ -1,0 +1,22 @@
+.container-contenu {
+  height: 100%;
+  width: 100%;
+}
+.scrollable-contenu {
+  width: 100%;
+  height: 95%;
+  gap: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.voirplus {
+  font-family: 'Kodchasan';
+  background-color: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 150px;
+  border: 1px solid black;
+}

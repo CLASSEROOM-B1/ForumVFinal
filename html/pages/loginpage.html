@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/styles/loginpage.css" media="all" />
+    <link href="https://fonts.cdnfonts.com/css/kodchasan" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/images/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/static/styles/header.css" media="all" />
+    <title>Login</title>
+</head>
+{{template "header"}}
+
+<body>
+    <div class="all">
+        <div class="all-data">
+            <div class="container-login-info">
+                <div class="login-info">
+                    <div class="container-title-login">
+                        <div class="title-login">
+                            LOGIN
+                        </div>
+                        <div class="image-login">
+                            <img src="/static/images/raspberrie.png" class="raspberrie">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <form method="POST">
+                        <div class="pseudo">
+                            <label for="pseudo">Pseudo</label>
+                        </div>
+                        <br>
+                        <input class="input-pseudo" placeholder="Pseudo" type="text" id="pseudo" name="pseudo">
+                        <br>
+                        <br>
+                        <br>
+                        <div class="password">
+                            <label for="password">Password</label>
+                        </div>
+                        <br>
+                        <input class="input-password" placeholder="**********" type="password" id="password"
+                            name="password">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="container-connection">
+                            <div class="connection">
+                                <button id="submitLogin" class="button-connection" type="submit"
+                                    value="Submit">CONNECTION</button>
+                            </div>
+                        </div>
+                    </form>
+                    <br>
+                    <div class="container-link-registration">
+                        <div class="link-registration">
+                            For registration, click <a href="/register">here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-spacebar">
+                <div class="spacebar">
+                </div>
+            </div>
+            <div class="container-logo">
+                <div class="logo">
+                    <img src="/static/images/Logo.png" class="logo">
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container-copyrigth">
+            <div class="copyrigth">
+                Copyright © 2023 Fruits Salade, all rights reserved.
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/static/script/loginPage.js"></script>
+</body>
+
+</html>

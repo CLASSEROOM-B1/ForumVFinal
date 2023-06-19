@@ -1,0 +1,611 @@
+/* -------------------------SCROLL BAR------------------------------ */
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: white;
+    /* color of the tracking area */
+    /* border:1px solid #C99393;
+    border-radius: 20px; */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #D9D9D9;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+}
+
+/* -------------------------SCROLL BAR------------------------------ */
+
+
+body {
+    background-color: #F2F2F2;
+
+}
+
+.all-data {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.container-profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48%;
+}
+
+
+.container-title-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-profile {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 25px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-left: 10px;
+}
+
+.cherry {
+    width: 45px;
+    height: 45px;
+}
+
+.followers {
+    display: flex;
+    justify-content: center;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.viewfriends {
+    width: 25px;
+    height: 25px;
+}
+
+.viewfriends:hover {
+    cursor: pointer;
+}
+
+.biography {
+    display: flex;
+    justify-content: center;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.pseudo {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.input-pseudo {
+    height: 35px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50px;
+    border: black 1px solid;
+    padding-left: 10px;
+}
+
+#pseudo {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.email {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.input-email {
+    height: 35px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50px;
+    border: black 1px solid;
+    padding-left: 10px;
+}
+
+#email {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #ef396c;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ef396c;
+}
+
+.change-password {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 15px;
+}
+
+.popup {
+    font-family: 'Kodchasan', sans-serif;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+    background-color: #ffffffcc;
+    padding: 20px;
+    background: transparent;
+    background-image: linear-gradient(90deg, white, white),
+        linear-gradient(90deg, #ef396c, #f69023);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 5px solid transparent;
+    border-radius: 25px;
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.616);
+}
+
+.newpassword {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.changepassword {
+    font-size: 25px;
+    text-align: center;
+}
+
+.passwordtext {
+    font-size: 15px;
+}
+
+.confirmpasswordtext {
+    font-size: 15px;
+}
+
+.passwordinput {
+    height: 30px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50px;
+    border: black 1px solid;
+    padding-left: 10px;
+}
+
+.submit {
+    margin-left: 150px;
+    font-family: 'Kodchasan', sans-serif;
+    height: 35px;
+    width: 200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+.submit:hover {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(90deg, white, white),
+        linear-gradient(90deg, #ef396c, #f69023);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+
+.container-logout {
+    display: flex;
+    justify-content: center;
+}
+
+.button-logout {
+    font-family: 'Kodchasan', sans-serif;
+    height: 35px;
+    width: 200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+
+}
+
+.button-logout:hover {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(90deg, white, white),
+        linear-gradient(90deg, #ef396c, #f69023);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+/* .container-spacebar {
+    height: 100vh;
+} */
+
+.spacebar {
+    margin-top: 50px;
+    /* margin-left: 200px; */
+    width: 4px;
+    height: 500px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.posts {
+    background-color: #F2F2F2;
+    display: flex;
+    width: 48%;
+    height: 640px;
+    flex-direction: column;
+    margin-left: 20px;
+
+}
+
+.buttonposts {
+    background-color: #F2F2F2;
+    height: 10vh;
+    width: 50%;
+    color: #aaaaaa;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #aaaaaa;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 15px;
+    transition: border-bottom-color 0.5s ease;
+
+
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+}
+
+.buttonposts.active {
+    border-bottom-color: rgb(0, 0, 0);
+    color: black;
+}
+
+#likedposts {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+#ourposts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.croix {
+    width: 60px;
+    height: 60px;
+}
+
+.NLP {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 20px;
+}
+
+.popupFriend {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Kodchasan', sans-serif;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    background: transparent;
+    background-image: linear-gradient(90deg, white, white),
+        linear-gradient(90deg, #ef396c, #f69023);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 5px solid transparent;
+    border-radius: 25px;
+}
+
+.overlayFriend {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.616);
+}
+
+.buttons-view-friend{
+    display: flex;
+}
+
+/* .popupFriend {
+    background-color: #F2F2F2;
+    display: flex;
+    width: 48%;
+    height: 640px;
+    flex-direction: column;
+    margin-left: 20px;
+
+} */
+
+.buttonfriends {
+    background-color: white;
+    height: 10vh;
+    width: 50%;
+    color: #aaaaaa;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #aaaaaa;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 15px;
+    transition: border-bottom-color 0.5s ease;
+}
+.buttonblock {
+    background-color: white;
+    height: 10vh;
+    width: 50%;
+    color: #aaaaaa;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #aaaaaa;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 15px;
+    transition: border-bottom-color 0.5s ease;
+}
+
+.buttons-view-friends {
+    display: flex;
+    width: 100%;
+}
+
+.buttonfriends.active {
+    border-bottom-color: rgb(0, 0, 0);
+    color: black;
+}
+.buttonblock.active {
+    border-bottom-color: rgb(0, 0, 0);
+    color: black;
+}
+
+#blocked {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+#followers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.cross {
+    width: 50px;
+    height: 50px;
+}
+
+.NBU {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 20px;
+}
+
+.NF {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 20px;
+}
+
+.closebutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closepopup {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    font-family: 'Kodchasan', sans-serif;
+    height: 40px;
+    width: 200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+.closepopup:hover {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(90deg, white, white),
+        linear-gradient(90deg, #ef396c, #f69023);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+
+.container-copyrigth {
+    display: flex;
+    justify-content: center;
+}
+
+.copyrigth {
+    font-size: 15px;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+@media screen and (max-width : 2560px) {
+    /* .spacebar {
+        margin-left: 480px;
+    } */
+
+    /* .profile-info {
+        margin-left: 500px;
+    } */
+
+}
+
+@media screen and (max-width : 1440px) {
+    /* .profile-info {
+        margin-left: 200px;
+    } */
+
+    /* .spacebar {
+        margin-left: 200px;
+    } */
+}
+
+@media screen and (max-width : 1024px) {
+    .spacebar {
+        margin-left: 90px;
+    }
+
+    /* .profile-info {
+        margin-left: 100px;
+    }
+ */
+}
+
+@media screen and (max-width : 768px) {
+
+    .popupFriend{
+        width: 500px;
+        height: 500px;
+    }
+
+    .spacebar {
+        height: 600px;
+        margin: auto;
+    }
+
+    .title-profile {
+        font-size: 20px;
+    }
+
+    .followers {
+        margin-left: 15px;
+    }
+
+    .change-password {
+        font-size: 10px;
+    }
+
+    .cherry {
+        width: 35px;
+        height: 35px;
+    }
+
+    .input-pseudo {
+        width: 220px;
+    }
+
+    .input-email {
+        width: 220px;
+    }
+
+    .posts {
+        /* margin-right: 200px; */
+        margin: 0px;
+    }
+
+    .profile-info {
+        margin: 0%;
+
+    }
+
+}
+
+.container-spacebar {
+    width: 2%;
+}
+
+@media screen and (max-width : 1050px) {
+    .all-data {
+        align-items: center;
+        flex-direction: column;
+    }
+    .spacebar {
+        display: none;
+    }
+    .posts {
+        margin-top: 50px;
+    }
+
+    #ourposts {
+        margin-bottom :200px;
+    }
+}
+
+
+
+@media screen and (max-width : 620px){
+    .popup {
+        width: 400px;
+        height: 400px;
+    }
+
+    .popupFriend{
+        width: 400px;
+        height: 400px;
+    }
+
+    .submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:530px){
+    .popupFriend{
+        width: 350px;
+        height: 350px;
+    }
+
+    .popup {
+        width: 350px;
+        height: 350px;
+    }
+    .submit{
+        margin-bottom: 20px;
+    }
+}

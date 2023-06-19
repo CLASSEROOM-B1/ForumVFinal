@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/styles/homepage.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/category.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/header.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/searchbar.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/contenu.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/card.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/styles/commentaire.css" media="all" />
+    <link href="https://fonts.cdnfonts.com/css/kodchasan" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/images/Logo.png" type="image/x-icon">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="main">
+        {{ template "header"}}
+        <div class="container-all">
+            <br>
+            <br>
+            <br>
+            <div class="container-categories">
+                <div class="categories">
+                    <div class="container-create-post">
+                        <div class="create-post" id="create-post">
+                            <img src="/static/images/addpost.png" class="addpost-image" id="addpost">
+                            <br>
+                            <div class="title-create-post">
+                                &ensp; CREATE<br>NEW POST
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="container-spacebar">
+                        <div class="spacebar">
+                        </div>
+                    </div>
+                    {{template "category"}}
+                    <br>
+                    <br>
+                    <div class="container-spacebar-contact">
+                        <div class="spacebar-contact">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="container-contact-us">
+                        <div class="contact-us">
+                            <img src="/static/images/message.png" class="contact-image" id="contactUs">
+                            <br>
+                            <div class="title-contact-us">
+                                CONTACT US
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-big-spacebar">
+                        <div class="big-spacebar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-forum">
+                <div class="forum">
+                    {{template "searchbar"}}
+
+                    <br>
+                    <br>
+                    <div class="contenu">
+                        {{template "contenu"}}
+                    </div>
+                </div>
+            </div>
+            <div class="overlayPost" id="overlayPost">
+                <div class="container-popup" id="container-popup">
+                    <div class="title-popup">
+                        New post :
+                        <br>
+                        <br>
+                    </div>
+                    <br>
+                    <br>
+                    <form method="post">
+                        <label class="titlepost">
+                            <div class="titletext">Title : &ensp;</div>
+                            <input type="text" class="contentCreate-titlepost" placeholder="Title" id="Title" />
+                        </label>
+                        <br>
+                        <br>
+                        <div class="choice-select">
+                            <label for="category-select">Choose a category : &ensp; </label>
+                            <br>
+
+                            <select name="category" id="category-select">
+                                <option value="">Category</option>
+                                <option value="Politics">Politics</option>
+                                <option value="Sports">Sports</option>
+                                <option value="High - Tech">High - Tech</option>
+                                <option value="Arts">Arts</option>
+                                <option value="Tips / Tricks">Tips / Tricks</option>
+                                <option value="Movie / Shows">Movie / Shows</option>
+                                <option value="Society">Society</option>
+                                <option value="Musics">Musics</option>
+                                <option value="Gaming">Gaming</option>
+                                <option value="History / Learning">History / Learning</option>
+                                <option value="Food / Drink">Food / Drink</option>
+                                <option value="Travels">Travels</option>
+                            </select>
+                        </div>
+                        <br>
+                        <br>
+                        <label class="postContentText">
+                            <textarea type="text" class="contentCreate-textpost" id="textArea"
+                                placeholder="Type your message ..."></textarea>
+                        </label>
+                        <div class="container-submit" id="container-submit">
+                            <button class="submitpost" id="submitPost">SUBMIT</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div class="overlayContact" id="overlayContact">
+                <div class="container-popup-contact" id="container-popup-contact">
+                    <div class="title-popup-contact">
+                        Contact us :
+                        <br>
+                        <br>
+                    </div>
+                    <br>
+                    <br>
+                    <form type="submit" id="form">
+                        <label class="postContentText" for="message">
+                            <input type="text" class="contentCreate-textpost" id="message" name="message"
+                                placeholder="Type your message ..."></input>
+                        </label>
+                        <div class="container-submit" id="container-submit">
+                            <button class="submitcontact" id="submitContact">SUBMIT</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container-copyrigth">
+            <div class="copyrigth">
+                Copyright © 2023 Fruits Salade, all rights reserved.
+            </div>
+        </div>
+        <script src="/static/script/popupPost.js"></script>
+        <script type="module" src="/static/script/homePage.js"></script>
+</body>
+
+</html>

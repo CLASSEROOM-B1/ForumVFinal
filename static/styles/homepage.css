@@ -1,0 +1,278 @@
+/* -------------------------SCROLL BAR------------------------------ */
+body::-webkit-scrollbar {
+  width: 12px;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: white;
+  /* color of the tracking area */
+  /* border:1px solid #C99393;
+  border-radius: 20px; */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+}
+
+/* -------------------------SCROLL BAR------------------------------ */
+
+body {
+  background-color: #F2F2F2;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  font-family: 'Kodchasan';
+
+}
+
+.container-categories {
+  width: 15%;
+  font-size: 15px;
+  display: flex;
+
+}
+
+.categories {
+  width: 100%;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addpost-image {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.contact-image {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.container-spacebar-contact {
+  display: flex;
+  justify-content: center;
+}
+
+.spacebar {
+  display: flex;
+  justify-content: center;
+  width: 90px;
+  height: 4px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.spacebar-contact {
+  display: flex;
+  justify-content: center;
+  width: 90px;
+  height: 4px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.container-big-spacebar {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+
+}
+
+.big-spacebar {
+  position: absolute;
+  margin-right: -187px;
+  margin-top: -671px;
+  height: 673px;
+  width: 4px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.container-forum {
+  position: absolute;
+  margin-left: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px transparent;
+  border-radius: 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+
+.contenu {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 585px;
+}
+
+#overlayPost {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.616);
+}
+
+#overlayContact {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.616);
+}
+
+#container-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 650px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 3px solid #2B99FF;
+  cursor: pointer;
+  border-radius: 25px;
+  text-align: center;
+}
+
+#container-popup-contact{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 400px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 3px solid hsl(120, 67%, 51%);
+  cursor: pointer;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.title-popup-contact {
+  font-family: 'Kodchasan';
+  font-size: 30px;
+}
+
+.title-popup {
+  font-family: 'Kodchasan';
+  font-size: 30px;
+  border-bottom: 2px solid #2B99FF;
+}
+
+.titlepost{
+  display: flex;
+}
+
+.choice-select{
+  display: flex;
+  align-items: flex-start;
+}
+
+label {
+  font-family: 'Kodchasan';
+}
+
+#category-select {
+  font-family: 'Kodchasan';
+}
+
+.contentCreate-titlepost {
+  font-family: 'Kodchasan';
+}
+
+.contentCreate-textpost {
+  font-family: 'Kodchasan';
+  user-select: none;
+  height: 150px;
+  width: 400px;
+}
+
+.submitpost{
+  border: 2px solid #2B99FF;
+  border-radius: 50px;
+  margin-top: 50px;
+  background-color: rgb(255, 255, 255);
+  width: 150px;
+  height: 35px;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  
+}
+
+
+.submitcontact{
+  border: 2px solid hsl(120, 67%, 51%);
+  border-radius: 50px;
+  margin-top: 50px;
+  background-color: rgb(255, 255, 255);
+  width: 150px;
+  height: 35px;
+  font-family: "Kodchasan", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  
+}
+
+
+.container-copyrigth {
+  display: flex;
+  justify-content: center;
+}
+
+.copyrigth {
+  font-size: 15px;
+  font-family: 'Kodchasan', sans-serif;
+}
